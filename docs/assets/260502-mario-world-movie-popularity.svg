@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7e6"/><stop offset="0.45" stop-color="#f4f8ff"/><stop offset="1" stop-color="#fff0f0"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#1b1b1b" flood-opacity="0.14"/></filter>
+    <style>
+      .title{font:800 62px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#171717}.sub{font:500 28px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#444}.card{fill:#fff;rx:30;filter:url(#shadow)}.h{font:800 31px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#111}.t{font:500 22px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#333}.num{font:900 46px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff}.metric{font:900 54px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#e63946}.small{font:600 20px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#555}.brand{font:600 20px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#555}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="1430" cy="130" r="95" fill="#ffd166" opacity=".75"/><circle cx="150" cy="830" r="130" fill="#4cc9f0" opacity=".18"/>
+  <text x="90" y="100" class="title">마리오 영화, 왜 전 세계에서 터졌나?</text>
+  <text x="94" y="145" class="sub">글로벌 IP × 가족 관객 × 게임 향수 × 쉬운 서사 × 머천다이징 엔진</text>
+  <rect x="90" y="190" width="450" height="230" class="card"/><text x="125" y="245" class="h">흥행 결과</text><text x="125" y="315" class="metric">$1.36B</text><text x="125" y="360" class="t">전세계 박스오피스</text><text x="125" y="395" class="small">북미 42% / 해외 58%</text>
+  <rect x="575" y="190" width="450" height="230" class="card"/><text x="610" y="245" class="h">관객 구조</text><text x="610" y="315" class="metric">가족 + 30·40대</text><text x="610" y="360" class="t">아이와 부모가 함께 소비</text><text x="610" y="395" class="small">세대 간 IP 공유가 핵심</text>
+  <rect x="1060" y="190" width="450" height="230" class="card"/><text x="1095" y="245" class="h">콘텐츠 전략</text><text x="1095" y="315" class="metric">낮은 진입장벽</text><text x="1095" y="360" class="t">복잡한 세계관보다 즉시 이해</text><text x="1095" y="395" class="small">밝은 톤·빠른 전개·캐릭터성</text>
+  <rect x="90" y="475" width="330" height="270" class="card"/><circle cx="145" cy="540" r="34" fill="#e63946"/><text x="132" y="555" class="num">1</text><text x="190" y="535" class="h">IP 기억</text><text x="125" y="590" class="t">게임을 몰라도 아는</text><text x="125" y="625" class="t">캐릭터·음악·아이템</text>
+  <rect x="455" y="475" width="330" height="270" class="card"/><circle cx="510" cy="540" r="34" fill="#4361ee"/><text x="497" y="555" class="num">2</text><text x="555" y="535" class="h">가족 영화</text><text x="490" y="590" class="t">부모는 향수, 아이는</text><text x="490" y="625" class="t">캐릭터와 액션 소비</text>
+  <rect x="820" y="475" width="330" height="270" class="card"/><circle cx="875" cy="540" r="34" fill="#ffb703"/><text x="862" y="555" class="num">3</text><text x="920" y="535" class="h">팬서비스</text><text x="855" y="590" class="t">레퍼런스는 풍부하지만</text><text x="855" y="625" class="t">스토리는 단순하게 유지</text>
+  <rect x="1185" y="475" width="330" height="270" class="card"/><circle cx="1240" cy="540" r="34" fill="#2a9d8f"/><text x="1227" y="555" class="num">4</text><text x="1285" y="535" class="h">산업 엔진</text><text x="1220" y="590" class="t">극장·게임·굿즈·테마파크</text><text x="1220" y="625" class="t">동시 확장 가능</text>
+  <rect x="90" y="790" width="1420" height="105" rx="28" fill="#111827" filter="url(#shadow)"/><text x="125" y="855" style="font:800 34px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#fff">결론: ‘게임 영화’가 아니라, 전 세대가 공유 가능한 글로벌 가족 엔터테인먼트 상품으로 설계된 것이 승부처.</text>
+  <text x="990" y="950" class="brand">Jeremy's Insight by 🤖 딸깍봇 / blog.naver.com/jeremylee0213</text>
+</svg>
