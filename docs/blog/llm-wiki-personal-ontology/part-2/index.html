@@ -1,0 +1,38 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM Wiki는 RAG와 뭐가 다를까</title><style>body{margin:0;background:#f6f8fb;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.85}.wrap{max-width:900px;margin:0 auto;padding:56px 22px 90px}.hero{background:linear-gradient(135deg,#102543,#38558a);color:white;border-radius:28px;padding:42px 34px;margin-bottom:28px;box-shadow:0 20px 60px rgba(16,37,67,.18)}h1{font-size:38px;line-height:1.18;letter-spacing:-.04em;margin:0 0 12px}.sub{font-size:18px;color:#dbeafe}article{background:white;border:1px solid #dfe7f2;border-radius:28px;padding:34px;box-shadow:0 12px 36px rgba(15,39,80,.07)}h2{font-size:26px;margin:46px 0 14px;color:#123d7a}p{margin:0 0 16px}img{width:100%;border-radius:22px;margin:28px 0 8px;box-shadow:0 16px 44px rgba(15,39,80,.14)}pre{background:#0f172a;color:#e5edf8;border-radius:16px;padding:18px;overflow:auto}ul{background:#f8fbff;border:1px solid #dfe7f2;border-radius:16px;padding:18px 22px 18px 38px}.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}.nav a,.index a{color:#0b63ce;font-weight:700;text-decoration:none}.index li{margin:10px 0}.caption{font-size:13px;color:#667085;text-align:center;margin-top:-2px}.brand{text-align:right;color:#667085;margin-top:50px;font-size:14px}</style></head><body><main class="wrap"><section class="hero"><h1>LLM Wiki는 RAG와 뭐가 다를까</h1><div class="sub">찾기와 다시 쓰기의 차이</div></section><article><p>LLM Wiki를 이야기하면 자연스럽게 RAG가 떠오른다.</p>
+<p>둘 다 많은 자료에서 답을 찾기 위한 방식이다.</p>
+<p>하지만 내가 써보며 느낀 핵심 차이는 명확했다.</p>
+<p>RAG는 <b>찾기</b>에 강하고, LLM Wiki는 <b>다시 쓰기</b>에 강하다.</p>
+<img src="../../assets/llm-wiki-personal-ontology/llm-wiki-personal-ontology-2-1.png" alt="RAG와 LLM Wiki의 차이를 보여주는 비교 이미지"><div class="caption">RAG와 LLM Wiki의 차이를 보여주는 비교 이미지</div>
+<h2>1. RAG는 빠르게 찾아준다</h2>
+<p>RAG는 원본 문서를 조각으로 나누고, 임베딩하고, 질문이 들어오면 관련 조각을 찾아 LLM에 넣는 방식이다.</p>
+<p>빠르다. 대량 문서에 좋다. 검색 시스템으로는 강하다.</p>
+<p>특히 회사 문서, 제품 매뉴얼, 법률 자료처럼 원본을 빠르게 검색해야 할 때 유용하다.</p>
+<p>하지만 개인 지식관리에서는 조금 다른 문제가 생긴다.</p>
+<p>찾은 조각이 내 생각의 구조가 되지는 않는다.</p>
+<h2>2. LLM Wiki는 읽고 고칠 수 있다</h2>
+<p>LLM Wiki는 원본을 검색하는 데서 끝나지 않는다.</p>
+<p>원본을 읽고, 요약하고, 개념 페이지로 바꾸고, 관련 문서와 연결한다.</p>
+<p>무엇보다 결과물이 Markdown이다.</p>
+<p>내가 읽을 수 있고, 수정할 수 있고, 다른 글로 재사용할 수 있다.</p>
+<img src="../../assets/llm-wiki-personal-ontology/llm-wiki-personal-ontology-2-2.png" alt="데이터 조각이 Markdown 지식 페이지로 정리되는 장면"><div class="caption">데이터 조각이 Markdown 지식 페이지로 정리되는 장면</div>
+<h2>3. 개인 지식에는 편집 가능성이 중요하다</h2>
+<p>개인 지식은 고정된 문서가 아니다.</p>
+<p>오늘의 생각이 내일 바뀐다. 어제의 메모가 다음 달 블로그 주제가 된다. 하나의 대화가 제품 아이디어로 이어진다.</p>
+<p>그래서 검색만 잘되는 것보다, 계속 고치고 다시 연결할 수 있는 구조가 중요하다.</p>
+<p>LLM Wiki는 이 점에서 나에게 잘 맞았다.</p>
+<h2>4. 둘은 경쟁이 아니라 역할이 다르다</h2>
+<p>나는 RAG가 나쁘다고 생각하지 않는다.</p>
+<p>오히려 둘은 보완 관계에 가깝다.</p>
+<pre><code>RAG / 검색 도구
+<p>→ 빠른 원본 탐색</p>
+<p>LLM Wiki → 오래 쓸 지식으로 정리&lt;/code&gt;&lt;/pre&gt;</p>
+<p>검색은 입구고, 위키는 축적이다.</p>
+<img src="../../assets/llm-wiki-personal-ontology/llm-wiki-personal-ontology-2-3.png" alt="검색 결과가 편집 가능한 위키 페이지로 합쳐지는 장면"><div class="caption">검색 결과가 편집 가능한 위키 페이지로 합쳐지는 장면</div>
+<h2>5. 내가 선택한 기준</h2>
+<p>내 기준은 단순했다.</p>
+<p>나중에 다시 볼 수 있는가. 내가 직접 고칠 수 있는가. 블로그와 보고서로 바꿀 수 있는가. AI가 다음에도 읽을 수 있는가.</p>
+<p>이 질문에 더 잘 맞는 쪽이 LLM Wiki였다.</p>
+<h2>마무리</h2>
+<p>RAG가 검색 엔진이라면, LLM Wiki는 편집 가능한 지식 지도다.</p>
+<p>내 목적은 단순 검색이 아니었다.</p>
+<p>내 생각이 다시 연결되고, 다음 글과 다음 판단에 쓰이는 구조를 만드는 것이었다.</p><div class="brand">Jeremy's Insight by 🤖 딸깍봇<br>blog.naver.com/jeremylee0213</div></article><div class="nav"><a href="../part-1/">← 이전 글</a><a href="../part-3/">다음 글 →</a></div></main></body></html>

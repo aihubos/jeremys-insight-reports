@@ -1,0 +1,46 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>왜 나는 LLM Wiki 기반 개인 지식 온톨로지를 만들기 시작했나</title><style>body{margin:0;background:#f6f8fb;color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.85}.wrap{max-width:900px;margin:0 auto;padding:56px 22px 90px}.hero{background:linear-gradient(135deg,#102543,#38558a);color:white;border-radius:28px;padding:42px 34px;margin-bottom:28px;box-shadow:0 20px 60px rgba(16,37,67,.18)}h1{font-size:38px;line-height:1.18;letter-spacing:-.04em;margin:0 0 12px}.sub{font-size:18px;color:#dbeafe}article{background:white;border:1px solid #dfe7f2;border-radius:28px;padding:34px;box-shadow:0 12px 36px rgba(15,39,80,.07)}h2{font-size:26px;margin:46px 0 14px;color:#123d7a}p{margin:0 0 16px}img{width:100%;border-radius:22px;margin:28px 0 8px;box-shadow:0 16px 44px rgba(15,39,80,.14)}pre{background:#0f172a;color:#e5edf8;border-radius:16px;padding:18px;overflow:auto}ul{background:#f8fbff;border:1px solid #dfe7f2;border-radius:16px;padding:18px 22px 18px 38px}.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}.nav a,.index a{color:#0b63ce;font-weight:700;text-decoration:none}.index li{margin:10px 0}.caption{font-size:13px;color:#667085;text-align:center;margin-top:-2px}.brand{text-align:right;color:#667085;margin-top:50px;font-size:14px}</style></head><body><main class="wrap"><section class="hero"><h1>왜 나는 LLM Wiki 기반 개인 지식 온톨로지를 만들기 시작했나</h1><div class="sub">메모는 많은데 다시 못 쓰는 문제에서 시작한 실험</div></section><article><p>나는 메모를 꽤 많이 하는 편이다.</p>
+<p>좋은 글을 보면 저장하고, 아이디어가 떠오르면 적어두고, AI와 대화하다가 나온 생각도 어딘가에 남겨둔다.</p>
+<p>그런데 어느 순간 이상한 문제가 생겼다.</p>
+<p>분명히 기록은 많은데, 막상 필요할 때 다시 꺼내 쓰기가 어려웠다.</p>
+<img src="../../assets/llm-wiki-personal-ontology/llm-wiki-personal-ontology-1-1.png" alt="흩어진 메모가 다시 쓰이지 못하는 상태"><div class="caption">흩어진 메모가 다시 쓰이지 못하는 상태</div>
+<h2>1. 메모는 많은데 왜 계속 새로 검색하게 될까</h2>
+<p>처음에는 단순히 정리가 부족한 줄 알았다.</p>
+<p>폴더를 나누고, 태그를 붙이고, 파일명을 바꾸면 해결될 줄 알았다.</p>
+<p>그런데 아니었다.</p>
+<p>문제는 저장 위치가 아니었다.</p>
+<p>문제는 <b>메모 사이의 관계</b>였다.</p>
+<p>내가 예전에 어떤 주제로 고민했는지, 그때 어떤 자료를 봤는지, 그 생각이 지금의 블로그나 보고서와 어떻게 이어지는지.</p>
+<p>이 연결이 없으니 매번 처음부터 다시 검색하게 됐다.</p>
+<h2>2. 내가 원한 건 지식 창고가 아니라 지식 지도였다</h2>
+<p>자료를 많이 넣는 창고는 이미 있었다.</p>
+<p>Obsidian도 있고, Inbox도 있고, 링크도 많고, 대화 기록도 많았다.</p>
+<p>하지만 창고는 스스로 길을 알려주지 않는다.</p>
+<p>내가 필요했던 건 이런 구조였다.</p>
+<ul><li>이 주제의 핵심 문서는 무엇인지</li><li>관련된 개념은 어디에 있는지</li><li>어떤 질문으로 다시 탐색할 수 있는지</li><li>블로그나 보고서로 바꾸려면 어떤 흐름이 좋은지</li></ul>
+<p>즉, 폴더가 아니라 <b>질문 중심의 지식 지도</b>가 필요했다.</p>
+<img src="../../assets/llm-wiki-personal-ontology/llm-wiki-personal-ontology-1-2.png" alt="흩어진 기록이 지식 지도로 바뀌는 순간"><div class="caption">흩어진 기록이 지식 지도로 바뀌는 순간</div>
+<h2>3. LLM Wiki라는 방식이 딱 맞았다</h2>
+<p>LLM Wiki는 원본 자료를 그냥 쌓아두는 방식이 아니다.</p>
+<p>LLM이 자료를 읽고, 사람이 다시 읽을 수 있는 Markdown 페이지로 정리하고, 그 페이지들을 서로 연결하는 방식이다.</p>
+<p>내 구조에서는 이렇게 움직인다.</p>
+<pre><code>raw 자료
+<p>→ pages 지식 페이지 → index 목차 → 질문 인덱스 → log 변경 이력&lt;/code&gt;&lt;/pre&gt;</p>
+<p>여기서 중요한 건 Markdown이다.</p>
+<p>AI도 읽을 수 있고, 나도 직접 고칠 수 있다.</p>
+<p>도구에 갇히지 않고 파일로 남는다.</p>
+<h2>4. 내가 실제로 활용하는 방식</h2>
+<p>지금은 대화에서 나온 아이디어를 Inbox에 저장하고, 반복해서 쓸 만한 주제는 LLM Wiki page로 승격한다.</p>
+<p>그 page는 다시 블로그 목차가 되고, 보고서 구조가 되고, 제품 아이디어가 되고, 투자 판단 프레임이 된다.</p>
+<p>예전에는 메모가 끝이었다.</p>
+<p>지금은 메모가 시작점이다.</p>
+<img src="../../assets/llm-wiki-personal-ontology/llm-wiki-personal-ontology-1-3.png" alt="AI와 사람이 함께 지식을 정리하는 장면"><div class="caption">AI와 사람이 함께 지식을 정리하는 장면</div>
+<h2>5. 아직 완벽하진 않다</h2>
+<p>물론 이 시스템이 자동 정리 마법은 아니다.</p>
+<p>중복 문서도 생긴다. 태그도 지저분해질 수 있다. 민감정보는 일반화해야 한다. 너무 많이 넣으면 다시 쓰레기장이 된다.</p>
+<p>그래서 LLM Wiki는 창고라기보다 정원에 가깝다.</p>
+<p>계속 돌봐야 한다.</p>
+<p>하지만 한 번 구조가 잡히면, 내 지식이 다시 일하기 시작한다.</p>
+<h2>마무리</h2>
+<p>내가 만들고 싶은 건 메모 앱이 아니다.</p>
+<p>내가 쌓아온 대화와 기록과 생각이, 다시 연결되고, 다시 쓰이고, 다시 판단으로 이어지는 구조다.</p>
+<p>그게 내가 LLM Wiki 기반 개인 지식 온톨로지를 만들기 시작한 이유다.</p><div class="brand">Jeremy's Insight by 🤖 딸깍봇<br>blog.naver.com/jeremylee0213</div></article><div class="nav"><span></span><a href="../part-2/">다음 글 →</a></div></main></body></html>
