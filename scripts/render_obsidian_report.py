@@ -42,6 +42,7 @@ def render_markdown_body(md_body: str) -> tuple[str, list[str], str]:
     assets: list[str] = []
     title = "Report"
     i = 0
+    in_key_takeaway = False
     while i < len(lines):
         line = lines[i]
         if not line.strip():
@@ -53,10 +54,14 @@ def render_markdown_body(md_body: str) -> tuple[str, list[str], str]:
             i += 1
             continue
         if line.startswith("## "):
-            out.append(f"<h2>{inline(line[3:].strip())}</h2>")
+            heading = line[3:].strip()
+            in_key_takeaway = heading == "핵심 결론"
+            cls = ' class="key-heading"' if in_key_takeaway else ""
+            out.append(f"<h2{cls}>{inline(heading)}</h2>")
             i += 1
             continue
         if line.startswith("### "):
+            in_key_takeaway = False
             out.append(f"<h3>{inline(line[4:].strip())}</h3>")
             i += 1
             continue
@@ -90,7 +95,16 @@ def render_markdown_body(md_body: str) -> tuple[str, list[str], str]:
             while i < len(lines) and lines[i].startswith("- "):
                 items.append(lines[i][2:].strip())
                 i += 1
-            out.append("<ul>" + "".join(f"<li>{inline(x)}</li>" for x in items) + "</ul>")
+            cls = ' class="key-takeaways"' if in_key_takeaway else ""
+            out.append(f"<ul{cls}>" + "".join(f"<li>{inline(x)}</li>" for x in items) + "</ul>")
+            continue
+        if re.match(r"^\d+\.\s+", line):
+            items: list[str] = []
+            while i < len(lines) and re.match(r"^\d+\.\s+", lines[i]):
+                items.append(re.sub(r"^\d+\.\s+", "", lines[i]).strip())
+                i += 1
+            cls = ' class="key-takeaways"' if in_key_takeaway else ""
+            out.append(f"<ol{cls}>" + "".join(f"<li>{inline(x)}</li>" for x in items) + "</ol>")
             continue
         if line.strip() == "---":
             out.append("<hr>")
@@ -120,7 +134,8 @@ h2{font-size:25px;margin:46px 0 14px;color:#1455a6}h3{font-size:21px;margin:30px
 .hero{width:100%;border-radius:28px;box-shadow:0 24px 70px rgba(0,20,60,.28);margin:28px 0 24px}
 table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #dfe7f2;border-radius:18px;overflow:hidden;background:white;margin:18px 0}
 th{background:#edf5ff;color:#0b3d91;text-align:left}td,th{padding:13px 15px;border-bottom:1px solid #edf1f7;vertical-align:top}tr:last-child td{border-bottom:0}
-ul{background:#fff;border:1px solid #dfe7f2;border-radius:18px;padding:18px 24px 18px 42px}li{margin:8px 0}
+ul,ol{background:#fff;border:1px solid #dfe7f2;border-radius:18px;padding:18px 24px 18px 42px}li{margin:8px 0}
+.key-heading{font-size:31px;color:#0b3d91}.key-takeaways{background:#edf5ff;border:2px solid #bfd7ff;box-shadow:0 14px 36px rgba(15,39,80,.10);font-size:22px;font-weight:800;line-height:1.65}.key-takeaways li{margin:12px 0}
 hr{border:0;border-top:1px solid #dfe7f2;margin:42px 0 20px}a{color:#0b63ce;font-weight:700}code{background:#edf5ff;padding:2px 6px;border-radius:6px}
 """.strip()
 
