@@ -65,7 +65,7 @@ def render_markdown_body(md_body: str) -> tuple[str, list[str], str]:
             out.append(f"<h3>{inline(line[4:].strip())}</h3>")
             i += 1
             continue
-        m = re.match(r"!\[\[assets/(.+?)\]\]", line.strip())
+        m = re.match(r"!\[\[(?:300_Resources/390_Assets|assets)/(.+?)\]\]", line.strip())
         if m:
             name = m.group(1)
             assets.append(name)
@@ -144,7 +144,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("md_path", type=Path)
     ap.add_argument("--slug", help="Report slug. Defaults to slug inferred from published_url frontmatter.")
-    ap.add_argument("--obsidian-root", type=Path, default=Path("/Users/openclaw_bot/Obsidian/Jeremy's Vault/000_Inbox"))
+    ap.add_argument("--obsidian-root", type=Path, default=Path("/Users/openclaw_bot/Obsidian/Jeremy's Vault"))
     args = ap.parse_args()
 
     raw = args.md_path.read_text(encoding="utf-8")
@@ -162,9 +162,16 @@ def main() -> None:
 
     ASSETS.mkdir(parents=True, exist_ok=True)
     for name in asset_names:
-        src = args.obsidian_root / "assets" / name
-        if src.exists():
-            shutil.copy2(src, ASSETS / name)
+        candidates = [
+            args.obsidian_root / "300_Resources" / "390_Assets" / name,
+            args.obsidian_root / "000_Inbox" / "assets" / name,
+            args.obsidian_root / "assets" / name,
+        ]
+        for src in candidates:
+            if src.exists():
+                (ASSETS / name).parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src, ASSETS / name)
+                break
 
     out_dir = REPORTS / slug
     out_dir.mkdir(parents=True, exist_ok=True)
