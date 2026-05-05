@@ -1,0 +1,71 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>260505 OLED 동작 원리 보고서모드2</title><style>body{margin:0;background:linear-gradient(180deg,#07111f,#102543 24%,#f7f9fc 24%);color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75}
+.wrap{max-width:1080px;margin:0 auto;padding:64px 24px 80px}
+main{background:#fff;border-radius:28px;padding:42px 34px 48px;box-shadow:0 18px 60px rgba(15,39,80,.10)}
+h1{font-size:42px;letter-spacing:-.04em;line-height:1.15;margin:0 0 16px;color:#111827}
+main h1:first-child{color:#fff;background:#102543;margin:-42px -34px 24px;padding:42px 34px 12px;border-radius:28px 28px 0 0}
+h2{font-size:25px;margin:46px 0 14px;color:#1455a6}h3{font-size:21px;margin:30px 0 10px;color:#1f3f7a}
+.hero{width:100%;border-radius:28px;box-shadow:0 24px 70px rgba(0,20,60,.28);margin:28px 0 24px}
+table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #dfe7f2;border-radius:18px;overflow:hidden;background:white;margin:18px 0}
+th{background:#edf5ff;color:#0b3d91;text-align:left}td,th{padding:13px 15px;border-bottom:1px solid #edf1f7;vertical-align:top}tr:last-child td{border-bottom:0}
+ul,ol{background:#fff;border:1px solid #dfe7f2;border-radius:18px;padding:18px 24px 18px 42px}li{margin:8px 0}
+.key-heading{font-size:31px;color:#0b3d91}.key-takeaways{background:#edf5ff;border:2px solid #bfd7ff;box-shadow:0 14px 36px rgba(15,39,80,.10);font-size:22px;font-weight:800;line-height:1.65}.key-takeaways li{margin:12px 0}
+hr{border:0;border-top:1px solid #dfe7f2;margin:42px 0 20px}a{color:#0b63ce;font-weight:700}code{background:#edf5ff;padding:2px 6px;border-radius:6px}</style></head><body><div class="wrap"><main><h1>260505 OLED 동작 원리 보고서모드2</h1>
+<img class="hero" src="../../assets/260505-oled-principle-reportmode2.png" alt="report infographic">
+<p>&gt; 버전: 보고서모드2</p>
+<h2 class="key-heading">핵심 결론</h2>
+<ol class="key-takeaways"><li>💡 <b>OLED는 백라이트 없이 픽셀 자체가 빛나는 디스플레이임</b></li><li>⚡ <b>전자가 유기물 층에서 정공과 만나며 에너지를 빛으로 바꾸는 구조임</b></li><li>⚠️ <b>화질은 뛰어나지만 번인·수명·밝기 관리가 핵심 리스크임</b></li></ol>
+<h2>1. OLED를 한 문장으로 이해하기</h2>
+<p>OLED는 Organic Light Emitting Diode, 즉 유기 발광 다이오드다.</p>
+<p>쉽게 말하면 화면 뒤에서 조명을 비추는 방식이 아니라, 화면을 이루는 작은 픽셀 하나하나가 직접 빛을 내는 방식이다.</p>
+<p>이 차이 때문에 OLED는 검정 표현, 두께, 응답 속도에서 강점을 가진다.</p>
+<h2>2. OLED의 기본 구조</h2>
+<p>OLED는 매우 얇은 여러 층이 겹쳐진 구조다.</p>
+<table>
+<tr><th>층</th><th>역할</th><th>쉬운 비유</th></tr>
+<tr><td>양극</td><td>정공을 넣는 쪽</td><td>빈자리 입구</td></tr>
+<tr><td>정공 수송층</td><td>정공을 발광층으로 이동</td><td>길 안내</td></tr>
+<tr><td>발광층</td><td>실제 빛이 생기는 곳</td><td>무대</td></tr>
+<tr><td>전자 수송층</td><td>전자를 발광층으로 이동</td><td>반대편 길 안내</td></tr>
+<tr><td>음극</td><td>전자를 넣는 쪽</td><td>전자 입구</td></tr>
+</table>
+<p>핵심 무대는 발광층이다.</p>
+<p>이곳에서 전자와 정공이 만나 에너지를 내고, 그 에너지가 빛으로 나온다.</p>
+<h2>3. 빛이 나는 과정</h2>
+<p>OLED의 발광 과정은 네 단계로 볼 수 있다.</p>
+<ol><li>전압을 걸어 전류를 흘린다.</li><li>음극에서는 전자가, 양극에서는 정공이 들어온다.</li><li>전자와 정공이 유기 발광층에서 만난다.</li><li>결합 과정에서 에너지가 빛으로 방출된다.</li></ol>
+<p>이 과정을 픽셀 단위로 조절하면 화면의 밝기와 색을 만들 수 있다.</p>
+<h2>4. LCD와 OLED의 결정적 차이</h2>
+<table>
+<tr><th>구분</th><th>LCD</th><th>OLED</th></tr>
+<tr><td>빛의 원천</td><td>백라이트</td><td>픽셀 자체 발광</td></tr>
+<tr><td>검정 표현</td><td>빛을 막아 표현</td><td>픽셀을 꺼서 표현</td></tr>
+<tr><td>두께</td><td>백라이트 필요</td><td>더 얇게 가능</td></tr>
+<tr><td>응답 속도</td><td>상대적으로 느림</td><td>빠름</td></tr>
+<tr><td>리스크</td><td>빛샘, 명암 한계</td><td>번인, 수명 관리</td></tr>
+</table>
+<p>OLED의 강점은 검정이다.</p>
+<p>검정을 표현할 때 픽셀을 꺼버릴 수 있기 때문에 이론적으로 완전한 검정에 가까운 표현이 가능하다.</p>
+<h2>5. 왜 색이 나오는가</h2>
+<p>화면의 한 픽셀은 보통 빨강, 초록, 파랑 서브픽셀로 구성된다.</p>
+<p>각 서브픽셀의 밝기를 다르게 조절하면 다양한 색을 만들 수 있다.</p>
+<p>예를 들어 빨강과 초록을 켜면 노란색 계열이 되고, 세 색을 모두 강하게 켜면 흰색에 가까워진다.</p>
+<h2>6. OLED의 장점</h2>
+<p>OLED의 장점은 명확하다.</p>
+<ul><li>완전한 검정에 가까운 표현</li><li>높은 명암비</li><li>얇고 가벼운 패널 설계</li><li>빠른 응답 속도</li><li>넓은 시야각</li><li>플렉서블·폴더블 제품에 유리</li></ul>
+<p>그래서 스마트폰, 프리미엄 TV, 노트북, 차량용 디스플레이에서 많이 쓰인다.</p>
+<h2>7. 반대의견과 리스크</h2>
+<table>
+<tr><th>리스크</th><th>설명</th><th>대응</th></tr>
+<tr><td>번인</td><td>같은 이미지가 오래 남으면 잔상이 생길 수 있음</td><td>픽셀 이동, 밝기 제한, UI 관리</td></tr>
+<tr><td>수명</td><td>유기물 특성상 시간이 지나며 밝기 저하</td><td>소재 개선, 보정 알고리즘</td></tr>
+<tr><td>밝기</td><td>고휘도 지속 표현에서 부담</td><td>발열·전력 관리</td></tr>
+<tr><td>가격</td><td>구조와 공정 난도가 높음</td><td>생산 수율 개선 필요</td></tr>
+</table>
+<p>OLED는 완벽한 기술이 아니다.</p>
+<p>화질 장점이 큰 대신, 오래 같은 화면을 켜두는 환경에서는 관리가 중요하다.</p>
+<h2>최종 판단</h2>
+<p>OLED의 본질은 “픽셀 자체가 빛난다”는 점이다.</p>
+<p>이 구조 덕분에 검정 표현, 얇은 두께, 빠른 응답 속도를 얻지만, 유기물 기반 기술이기 때문에 번인과 수명이라는 숙제도 함께 가진다.</p>
+<p>따라서 OLED는 화질 중심 제품에 강하지만, 사용 환경과 수명 관리까지 함께 봐야 하는 디스플레이다.</p>
+<hr>
+<p><code>Jeremy&#x27;s Insight by 🤖 딸깍봇</code> <code><a href="https://blog.naver.com/jeremylee0213">https://blog.naver.com/jeremylee0213</a></code></p></main></div></body></html>
