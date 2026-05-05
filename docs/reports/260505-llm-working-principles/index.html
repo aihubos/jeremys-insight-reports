@@ -1,0 +1,69 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>260505 LLM 작동 원리 보고서</title><style>body{margin:0;background:linear-gradient(180deg,#07111f,#102543 24%,#f7f9fc 24%);color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75}
+.wrap{max-width:1080px;margin:0 auto;padding:64px 24px 80px}
+main{background:#fff;border-radius:28px;padding:42px 34px 48px;box-shadow:0 18px 60px rgba(15,39,80,.10)}
+h1{font-size:42px;letter-spacing:-.04em;line-height:1.15;margin:0 0 16px;color:#111827}
+main h1:first-child{color:#fff;background:#102543;margin:-42px -34px 24px;padding:42px 34px 12px;border-radius:28px 28px 0 0}
+h2{font-size:25px;margin:46px 0 14px;color:#1455a6}h3{font-size:21px;margin:30px 0 10px;color:#1f3f7a}
+.hero{width:100%;border-radius:28px;box-shadow:0 24px 70px rgba(0,20,60,.28);margin:28px 0 24px}
+table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #dfe7f2;border-radius:18px;overflow:hidden;background:white;margin:18px 0}
+th{background:#edf5ff;color:#0b3d91;text-align:left}td,th{padding:13px 15px;border-bottom:1px solid #edf1f7;vertical-align:top}tr:last-child td{border-bottom:0}
+ul,ol{background:#fff;border:1px solid #dfe7f2;border-radius:18px;padding:18px 24px 18px 42px}li{margin:8px 0}
+.key-heading{font-size:31px;color:#0b3d91}.key-takeaways{background:#edf5ff;border:2px solid #bfd7ff;box-shadow:0 14px 36px rgba(15,39,80,.10);font-size:22px;font-weight:800;line-height:1.65}.key-takeaways li{margin:12px 0}
+hr{border:0;border-top:1px solid #dfe7f2;margin:42px 0 20px}a{color:#0b63ce;font-weight:700}code{background:#edf5ff;padding:2px 6px;border-radius:6px}</style></head><body><div class="wrap"><main><h1>260505 LLM 작동 원리 보고서</h1>
+<img class="hero" src="../../assets/260505-llm-working-principles-handdrawn.png" alt="report infographic">
+<h2 class="key-heading">핵심 결론</h2>
+<ol class="key-takeaways"><li>🧠 <b>LLM은 문장을 이해한다기보다, 맥락상 다음에 올 토큰을 예측하는 시스템임</b></li><li>🔁 <b>학습은 지식 암기가 아니라, 방대한 텍스트 패턴을 압축한 확률 모델을 만드는 과정임</b></li><li>⚠️ <b>그럴듯한 답과 맞는 답은 다르므로, 검증·출처·도구 연결이 실전 품질을 좌우함</b></li></ol>
+<h2>1. LLM을 가장 쉽게 이해하는 비유</h2>
+<p>LLM은 “엄청 많이 읽은 자동완성 엔진”에 가깝다.</p>
+<p>다만 휴대폰 자동완성처럼 단어 하나를 잇는 수준이 아니라, 문장 전체의 맥락, 질문 의도, 앞뒤 관계, 문체, 형식까지 함께 보고 다음 조각을 고른다.</p>
+<p>그래서 겉으로는 생각하는 것처럼 보이지만, 내부적으로는 “지금까지의 문맥에서 다음에 올 가능성이 높은 토큰은 무엇인가?”를 계속 계산한다.</p>
+<h2>2. LLM이 답변을 만드는 기본 흐름</h2>
+<table>
+<tr><th>단계</th><th>무슨 일이 일어나는가</th><th>쉬운 설명</th></tr>
+<tr><td>1. 입력</td><td>사용자의 문장을 받는다</td><td>질문지를 받는 단계</td></tr>
+<tr><td>2. 토큰화</td><td>문장을 작은 조각으로 나눈다</td><td>단어·글자 조각으로 쪼갬</td></tr>
+<tr><td>3. 맥락 계산</td><td>앞뒤 관계와 중요도를 계산한다</td><td>어떤 말이 중요한지 표시</td></tr>
+<tr><td>4. 다음 토큰 예측</td><td>다음에 올 가능성이 높은 조각을 고른다</td><td>가장 자연스러운 다음 말 선택</td></tr>
+<tr><td>5. 반복 생성</td><td>선택한 조각을 다시 맥락에 넣고 반복한다</td><td>한 글자씩 문장을 완성</td></tr>
+</table>
+<p>핵심은 한 번에 완성된 답을 꺼내는 것이 아니라, 작은 조각을 순서대로 이어 붙여 답을 만든다는 점이다.</p>
+<h2>3. 학습은 어떻게 이루어지는가</h2>
+<p>LLM 학습은 인터넷 문서, 책, 코드, 대화문 같은 대량의 텍스트를 보고 “어떤 맥락에서 어떤 표현이 이어지는지”를 통계적으로 익히는 과정이다.</p>
+<p>이때 모델은 원문을 그대로 파일처럼 저장하는 것이 아니라, 수많은 패턴을 숫자 가중치로 압축한다.</p>
+<p>쉽게 말하면 “세상의 문장 사용 습관을 거대한 수학 지도에 새겨 넣는 일”이다.</p>
+<h2>4. 왜 똑똑해 보이는가</h2>
+<p>LLM은 단순히 다음 단어만 맞히는 것처럼 보이지만, 다음 단어를 잘 맞히려면 문법, 상식, 논리, 분야 지식, 대화 흐름을 어느 정도 내부 표현으로 잡아야 한다.</p>
+<p>그래서 번역, 요약, 코딩, 설명, 비교, 글쓰기 같은 다양한 일이 가능해진다.</p>
+<p>하지만 이것은 사람처럼 경험하고 의도를 가진 이해라기보다, 언어 패턴 안에 녹아 있는 구조를 매우 정교하게 사용하는 능력에 가깝다.</p>
+<h2>5. 실전에서 강해지는 이유: 도구 연결</h2>
+<p>기본 LLM은 텍스트 생성 모델이다.</p>
+<p>여기에 검색, 계산기, 코드 실행, 파일 읽기, 데이터베이스, 이미지 생성 같은 도구가 붙으면 역할이 달라진다.</p>
+<table>
+<tr><th>형태</th><th>장점</th><th>한계</th></tr>
+<tr><td>기본 LLM</td><td>빠른 설명·요약·초안 작성</td><td>최신 정보와 검증에 약함</td></tr>
+<tr><td>검색 연결 LLM</td><td>최신 자료 확인 가능</td><td>검색 품질에 영향 받음</td></tr>
+<tr><td>도구 사용 LLM</td><td>계산·파일·코드 작업 가능</td><td>도구 선택과 권한 관리 필요</td></tr>
+<tr><td>에이전트형 LLM</td><td>여러 단계를 계획하고 실행</td><td>오류 전파와 비용 관리 필요</td></tr>
+</table>
+<p>즉 LLM의 실전 가치는 모델 자체보다 “도구와 검증 시스템을 어떻게 붙이느냐”에서 크게 갈린다.</p>
+<h2>6. 반대의견과 리스크</h2>
+<table>
+<tr><th>리스크</th><th>설명</th><th>대응</th></tr>
+<tr><td>환각</td><td>틀린 내용을 그럴듯하게 말할 수 있음</td><td>출처 확인, 검색, 테스트 필요</td></tr>
+<tr><td>최신성 부족</td><td>학습 시점 이후 정보는 모를 수 있음</td><td>웹 검색·공식 문서 확인</td></tr>
+<tr><td>맥락 누락</td><td>긴 대화에서 중요한 조건을 놓칠 수 있음</td><td>요구사항을 구조화해서 전달</td></tr>
+<tr><td>과신</td><td>말이 자연스러워 정답처럼 느껴짐</td><td>중요한 결정은 사람 검토 필수</td></tr>
+<tr><td>비용/속도</td><td>긴 입력·고성능 모델은 비용 증가</td><td>작업별 모델 선택 필요</td></tr>
+</table>
+<p>LLM을 “정답 기계”로 보면 위험하다.</p>
+<p>반대로 “초안 생성·사고 보조·반복 작업 자동화 도구”로 보면 매우 강력하다.</p>
+<h2>7. 실무적 시사점</h2>
+<p>LLM을 잘 쓰는 사람은 모델에게 모든 판단을 맡기지 않는다.</p>
+<p>좋은 질문을 만들고, 필요한 자료를 붙이고, 답변을 검증하고, 반복 작업을 구조화한다.</p>
+<p>앞으로의 핵심 역량은 “AI가 답하게 하는 능력”보다 “AI가 틀리지 않게 일하게 만드는 능력”에 가깝다.</p>
+<h2>최종 판단</h2>
+<p>LLM은 사람처럼 생각하는 존재라기보다, 언어 패턴을 기반으로 다음 조각을 예측하는 강력한 확률 시스템이다.</p>
+<p>하지만 도구, 검색, 검증, 워크플로가 결합되면 단순 챗봇을 넘어 실제 업무 자동화 엔진이 된다.</p>
+<p>따라서 LLM을 이해할 때 가장 중요한 관점은 “마법”이 아니라 “예측 모델 + 도구 + 검증 시스템”이라는 구조다.</p>
+<hr>
+<p><code>Jeremy&#x27;s Insight by 🤖 딸깍봇</code> <code><a href="https://blog.naver.com/jeremylee0213">https://blog.naver.com/jeremylee0213</a></code></p></main></div></body></html>
