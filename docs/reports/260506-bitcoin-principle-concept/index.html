@@ -1,14 +1,52 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>비트코인 원리 개념 보고서</title><style>
-body{margin:0;background:linear-gradient(180deg,#141414,#2b1905 24%,#f7f9fc 24%);color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75}.wrap{max-width:1080px;margin:0 auto;padding:64px 24px 80px}main{background:#fff;border-radius:28px;padding:42px 34px 48px;box-shadow:0 18px 60px rgba(15,39,80,.10)}h1{font-size:42px;letter-spacing:-.04em;line-height:1.15;margin:0 0 16px;color:#111827}main h1:first-child{color:#fff;background:#2b1905;margin:-42px -34px 24px;padding:42px 34px 12px;border-radius:28px 28px 0 0}h2{font-size:25px;margin:46px 0 14px;color:#b45309}h3{font-size:21px;margin:30px 0 10px;color:#78350f}.hero{width:100%;border-radius:28px;box-shadow:0 24px 70px rgba(0,20,60,.20);margin:22px 0 34px}table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #eadcc8;border-radius:18px;overflow:hidden;background:white;margin:18px 0}th{background:#fff7ed;color:#9a3412;text-align:left}td,th{padding:13px 15px;border-bottom:1px solid #f2e8da;vertical-align:top}tr:last-child td{border-bottom:0}ul,ol{background:#fff;border:1px solid #eadcc8;border-radius:18px;padding:18px 24px 18px 42px}li{margin:8px 0}.key-heading{font-size:31px;color:#9a3412}.key-takeaways{background:#fff7ed;border:2px solid #fed7aa;box-shadow:0 14px 36px rgba(15,39,80,.08);font-size:22px;font-weight:800;line-height:1.65}.key-takeaways li{margin:12px 0}.imgset{display:grid;gap:28px}.caption{font-weight:800;color:#78350f;margin:6px 0 0}.note{background:#fffbeb;border:1px solid #fde68a;border-radius:18px;padding:16px 18px}hr{border:0;border-top:1px solid #eadcc8;margin:42px 0 20px}a{color:#0b63ce;font-weight:700}code{background:#fff7ed;padding:2px 6px;border-radius:6px}</style></head><body><div class="wrap"><main><h1>비트코인 원리 개념 보고서</h1>
-<p class="note"><b>요약:</b> 비트코인은 “중앙은행 없는 공동 장부”다. 거래를 모두가 검증하고, 채굴자가 계산 경쟁으로 새 페이지를 붙이며, 정해진 발행 규칙이 희소성을 만든다.</p>
-<h2 class="key-heading">핵심 결론</h2><ol class="key-takeaways"><li>🧾 <b>비트코인의 본질은 코인 자체보다 모두가 공유하는 거래 장부임</b></li><li>🔐 <b>개인키로 거래를 서명하고, 네트워크 참여자들이 규칙에 맞는지 검증함</b></li><li>⛏️ <b>채굴은 코인을 캐는 행위라기보다 새 블록을 붙이기 위한 검증 경쟁임</b></li><li>📉 <b>2100만 개 한도와 반감기는 희소성을 만드는 통화 정책임</b></li></ol>
-<h2>인포그래픽 3종</h2><div class="imgset"><div><p class="caption">보고서모드1 — 기본 손그림 학습 노트 스타일</p><img class="hero" src="../../assets/260506-bitcoin-principle-reportmode1.png" alt="비트코인 원리 보고서모드1 인포그래픽"></div><div><p class="caption">보고서모드2 — 저숙련 종이 스캔 하찮은 손그림 스타일</p><img class="hero" src="../../assets/260506-bitcoin-principle-reportmode2.png" alt="비트코인 원리 보고서모드2 인포그래픽"></div><div><p class="caption">보고서모드3 — 깔끔한 고해상도 정보형 인포그래픽</p><img class="hero" src="../../assets/260506-bitcoin-principle-reportmode3.png" alt="비트코인 원리 보고서모드3 인포그래픽"></div></div>
-<h2>1. 비트코인을 한 문장으로 이해하기</h2><p>비트코인은 은행이나 회사가 장부를 관리하지 않고, 전 세계 컴퓨터들이 같은 거래 장부를 나눠 가진 디지털 화폐다.</p><p>누가 얼마를 보냈는지는 장부에 기록되고, 그 장부가 규칙대로 이어졌는지를 네트워크가 계속 확인한다.</p><p>그래서 핵심은 “디지털 동전”보다 “위조하기 어려운 공동 장부 시스템”에 가깝다.</p>
-<h2>2. 지갑, 주소, 개인키</h2><table><tr><th>개념</th><th>역할</th><th>쉬운 비유</th></tr><tr><td>개인키</td><td>비트코인을 움직일 권한</td><td>절대 잃어버리면 안 되는 도장</td></tr><tr><td>공개주소</td><td>비트코인을 받을 주소</td><td>계좌번호에 가까운 공개 정보</td></tr><tr><td>서명</td><td>내가 보낸 거래임을 증명</td><td>도장 찍힌 송금 요청서</td></tr></table><p>비트코인은 “계정 로그인”이 아니라 개인키로 권한을 증명한다.</p><p>개인키를 잃으면 되찾기 어렵고, 개인키가 유출되면 자산을 빼앗길 수 있다.</p>
-<h2>3. 거래가 블록체인에 올라가는 과정</h2><ol><li>사용자가 개인키로 거래에 서명한다.</li><li>거래가 비트코인 네트워크의 여러 노드로 퍼진다.</li><li>노드는 잔액, 서명, 규칙 위반 여부를 검증한다.</li><li>채굴자는 검증된 거래들을 모아 블록 후보를 만든다.</li><li>작업증명 계산 경쟁에서 성공한 채굴자가 새 블록을 제안한다.</li><li>다른 노드들이 그 블록을 검증하고, 유효하면 체인에 연결한다.</li></ol>
-<h2>4. 작업증명은 왜 필요한가</h2><p>작업증명은 새 블록을 마음대로 붙이지 못하게 만드는 계산 비용 장치다.</p><p>블록을 조작하려면 과거 블록부터 다시 계산해야 하고, 동시에 정직한 네트워크보다 더 빠르게 따라잡아야 한다.</p><p>이 비용 때문에 비트코인은 “규칙을 지키는 편이 경제적으로 더 유리한 시스템”을 만든다.</p>
-<h2>5. 블록체인은 왜 위조가 어려운가</h2><table><tr><th>장치</th><th>효과</th></tr><tr><td>해시 연결</td><td>이전 블록 내용이 바뀌면 다음 블록들과 연결값이 깨짐</td></tr><tr><td>분산 노드</td><td>한 곳의 장부만 바꿔서는 전체 네트워크를 속이기 어려움</td></tr><tr><td>작업증명</td><td>조작에 큰 전기·장비·시간 비용이 듦</td></tr><tr><td>가장 긴 유효 체인</td><td>가장 많은 작업이 쌓인 유효한 기록을 기준으로 삼음</td></tr></table>
-<h2>6. 채굴 보상과 반감기</h2><p>채굴자는 새 블록을 만들면 보상으로 새 비트코인과 거래 수수료를 받는다.</p><p>하지만 새 비트코인 보상은 약 4년마다 절반으로 줄어드는 반감기 규칙을 따른다.</p><p>최대 발행량은 2100만 개로 정해져 있어, 시간이 갈수록 새 공급량은 줄어드는 구조다.</p>
-<h2>7. 비트코인의 강점</h2><ul><li>중앙기관 없이 작동하는 글로벌 결제·저장 네트워크</li><li>누구나 규칙을 검증할 수 있는 투명성</li><li>발행량이 정해진 희소성</li><li>검열 저항성과 국경 없는 전송성</li><li>오래 작동해 온 네트워크 효과</li></ul>
-<h2>8. 반대의견과 리스크</h2><table><tr><th>리스크</th><th>설명</th><th>확인 포인트</th></tr><tr><td>가격 변동성</td><td>수요 심리와 유동성에 따라 급등락 가능</td><td>투자 비중 관리</td></tr><tr><td>개인키 분실</td><td>복구 기관이 없어 자산 접근 불가</td><td>보관 방식, 백업</td></tr><tr><td>수수료·속도</td><td>네트워크 혼잡 시 비용 상승</td><td>레이어2 활용</td></tr><tr><td>규제</td><td>국가별 세금·거래소·결제 규칙 변화</td><td>거주국 규정</td></tr><tr><td>에너지 논쟁</td><td>작업증명 특성상 전력 사용 이슈 존재</td><td>채굴 에너지 믹스</td></tr></table>
-<h2>최종 판단</h2><p>비트코인의 원리는 어렵게 보이지만, 구조는 비교적 단순하다.</p><p>개인키로 거래를 승인하고, 노드가 규칙을 검증하며, 채굴자가 작업증명으로 새 블록을 붙인다.</p><p>결국 비트코인은 “믿을 사람을 정하는 시스템”이 아니라 “모두가 같은 규칙을 검증하는 시스템”이다.</p><p>그래서 비트코인을 이해할 때는 가격보다 먼저 장부, 합의, 희소성, 보관 리스크를 봐야 한다.</p><hr><p><code>Jeremy's Insight by 🤖 딸깍봇</code> <code><a href="https://blog.naver.com/jeremylee0213">https://blog.naver.com/jeremylee0213</a></code></p></main></div></body></html>
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>비트코인 원리 개념 보고서</title>
+<meta name="description" content="초보자를 위한 비트코인 원리 개념 설명: 블록체인, 해시, 작업증명, 채굴, 반감기, 지갑, 노드, 장점과 한계">
+<style>
+body{margin:0;background:linear-gradient(180deg,#17120b,#3a2408 25%,#f7f9fc 25%);color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.78}.wrap{max-width:1080px;margin:0 auto;padding:64px 24px 80px}main{background:#fff;border-radius:28px;padding:42px 34px 48px;box-shadow:0 18px 60px rgba(15,39,80,.10)}h1{font-size:42px;letter-spacing:-.04em;line-height:1.15;margin:0 0 16px;color:#111827}main h1:first-child{color:#fff;background:#3a2408;margin:-42px -34px 24px;padding:42px 34px 12px;border-radius:28px 28px 0 0}h2{font-size:25px;margin:44px 0 14px;color:#b45309}h3{font-size:21px;margin:30px 0 10px;color:#78350f}.hero{width:100%;border-radius:28px;box-shadow:0 24px 70px rgba(0,20,60,.20);margin:22px 0 10px}.caption{font-weight:800;color:#78350f;margin:4px 0 30px}.note{background:#fffbeb;border:1px solid #fde68a;border-radius:18px;padding:16px 18px}.key-heading{font-size:31px;color:#9a3412}.key-takeaways{background:#fff7ed;border:2px solid #fed7aa;box-shadow:0 14px 36px rgba(15,39,80,.08);font-size:21px;font-weight:800;line-height:1.65}.key-takeaways li{margin:12px 0}table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #eadcc8;border-radius:18px;overflow:hidden;background:white;margin:18px 0}th{background:#fff7ed;color:#9a3412;text-align:left}td,th{padding:13px 15px;border-bottom:1px solid #f2e8da;vertical-align:top}tr:last-child td{border-bottom:0}ul,ol{background:#fff;border:1px solid #eadcc8;border-radius:18px;padding:18px 24px 18px 42px}li{margin:8px 0}.warn{background:#fff1f2;border-color:#fecdd3}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.card{border:1px solid #eadcc8;border-radius:18px;padding:16px;background:#fffdf8}hr{border:0;border-top:1px solid #eadcc8;margin:42px 0 20px}a{color:#0b63ce;font-weight:700}code{background:#fff7ed;padding:2px 6px;border-radius:6px}@media(max-width:640px){h1{font-size:33px}main{padding:34px 22px}.wrap{padding:36px 14px}main h1:first-child{margin:-34px -22px 20px;padding:34px 22px 10px}}
+</style></head><body><div class="wrap"><main>
+<h1>비트코인 원리 개념 보고서</h1>
+<p class="note"><b>성격:</b> 이 문서는 투자 권유가 아니라, 비트코인이 어떻게 작동하는지 이해하기 위한 개념 설명 보고서입니다.</p>
+<h2 class="key-heading">핵심 결론</h2>
+<ol class="key-takeaways"><li>🧾 비트코인은 중앙 관리자가 없는 <b>공동 거래 장부</b>입니다.</li><li>🔐 사용자는 <b>개인키</b>로 거래를 서명하고, 노드는 규칙에 맞는지 검증합니다.</li><li>⛏️ <b>채굴</b>은 새 코인을 캐는 일만이 아니라, 작업증명으로 새 블록을 붙이는 검증 경쟁입니다.</li><li>📉 <b>2100만 개 공급 제한</b>과 반감기는 비트코인의 발행 규칙입니다.</li><li>⚖️ 탈중앙성과 투명성이라는 장점이 있지만, 에너지·변동성·확장성·규제·보관 리스크도 함께 봐야 합니다.</li></ol>
+<h2>보고서모드1 인포그래픽</h2>
+<img class="hero" src="../../assets/260506-bitcoin-principle-reportmode1.png" alt="비트코인 원리 개념 손그림 인포그래픽">
+<p class="caption">미색 종이 위 색연필·크레용 손그림 학습 노트 스타일</p>
+<h2>1. 비트코인을 한 문장으로 이해하기</h2>
+<p>비트코인은 은행, 카드사, 중앙은행 같은 한 기관이 장부를 관리하지 않고, 전 세계 참여자들이 같은 거래 기록을 검증하며 유지하는 디지털 화폐 네트워크입니다.</p>
+<p>여기서 핵심은 “인터넷에 떠다니는 동전”이 아니라 <b>누가 얼마를 보냈는지 기록한 장부를 모두가 같은 규칙으로 확인한다</b>는 점입니다.</p>
+<h2>2. 블록체인: 거래 장부를 페이지처럼 이어 붙이기</h2>
+<p>블록체인은 거래들을 일정한 묶음인 <b>블록</b>에 담고, 이 블록들을 시간순으로 연결한 장부입니다. 새 블록은 이전 블록의 해시값을 포함하기 때문에, 과거 기록 하나를 바꾸면 뒤에 이어진 연결도 함께 깨집니다.</p>
+<table><tr><th>개념</th><th>쉬운 비유</th><th>역할</th></tr><tr><td>블록</td><td>장부의 한 페이지</td><td>여러 거래를 묶음</td></tr><tr><td>체인</td><td>페이지를 순서대로 묶은 책</td><td>거래 기록의 시간순 연결</td></tr><tr><td>해시</td><td>내용이 바뀌면 달라지는 지문</td><td>위조·변경 탐지</td></tr></table>
+<h2>3. 해시: 조작을 들키게 만드는 디지털 지문</h2>
+<p>해시는 어떤 데이터를 넣으면 고정된 길이의 값이 나오는 함수입니다. 입력 내용이 아주 조금만 바뀌어도 결과가 크게 달라집니다. 그래서 블록 안의 거래를 바꾸면 블록 해시가 달라지고, 다음 블록이 기억하던 이전 해시와 맞지 않게 됩니다.</p>
+<p>단, 해시가 마법처럼 모든 공격을 막는 것은 아닙니다. 비트코인의 강도는 해시 연결, 작업증명 비용, 많은 노드의 검증이 함께 작동할 때 생깁니다.</p>
+<h2>4. 지갑, 개인키, 공개키, 주소</h2>
+<p>비트코인 지갑은 코인을 직접 보관하는 금고라기보다, 코인을 움직일 권한인 <b>개인키</b>를 관리하는 도구에 가깝습니다.</p>
+<table><tr><th>개념</th><th>역할</th><th>주의점</th></tr><tr><td>개인키</td><td>거래를 승인하는 비밀 권한</td><td>잃어버리면 복구가 어렵고, 유출되면 탈취 위험</td></tr><tr><td>공개키/주소</td><td>받는 사람을 식별하는 공개 정보</td><td>계좌번호처럼 공유 가능하지만 주소 확인은 필수</td></tr><tr><td>전자서명</td><td>개인키 소유자가 보낸 거래임을 증명</td><td>개인키를 공개하지 않고 권한을 증명</td></tr></table>
+<h2>5. 거래 검증은 어떻게 진행될까</h2>
+<ol><li>사용자가 “A 주소에서 B 주소로 얼마를 보낸다”는 거래를 만듭니다.</li><li>지갑은 개인키로 거래에 전자서명을 붙입니다.</li><li>거래는 네트워크의 여러 노드로 전파됩니다.</li><li>노드는 서명, 잔액, 이중지불 여부, 비트코인 규칙 위반 여부를 확인합니다.</li><li>검증된 거래는 채굴자가 블록 후보에 넣을 수 있습니다.</li><li>새 블록이 만들어지면 다른 노드들이 다시 검증하고, 유효할 때만 장부에 받아들입니다.</li></ol>
+<h2>6. 노드: 비트코인의 심판</h2>
+<p>노드는 비트코인 소프트웨어를 실행하며 거래와 블록이 규칙에 맞는지 확인하는 참여자입니다. 중요한 점은 채굴자가 블록을 제안할 수는 있지만, <b>노드가 틀린 블록을 거부할 수 있다</b>는 점입니다.</p>
+<p>이 구조 덕분에 비트코인은 특정 회사 서버 하나가 아니라, 많은 참여자가 같은 규칙을 독립적으로 검증하는 탈중앙 네트워크가 됩니다.</p>
+<h2>7. 작업증명(PoW)과 채굴</h2>
+<p>채굴자는 거래를 모아 새 블록 후보를 만들고, 특정 조건을 만족하는 해시를 찾기 위해 많은 계산을 반복합니다. 이 계산 경쟁을 <b>작업증명 Proof of Work</b>이라고 합니다.</p>
+<p>성공한 채굴자는 새 블록을 네트워크에 알리고, 다른 노드가 검증해 받아들이면 보상으로 새 비트코인과 거래 수수료를 받습니다. 즉 채굴은 단순히 “코인을 캐는 일”이 아니라 <b>장부에 새 페이지를 붙이는 비용 있는 경쟁</b>입니다.</p>
+<h2>8. 난이도 조정: 약 10분 리듬을 맞추는 장치</h2>
+<p>채굴 장비가 많아지면 블록이 너무 빨리 생길 수 있고, 장비가 줄면 너무 느려질 수 있습니다. 비트코인은 약 2주마다 난이도를 조정해 평균적으로 약 10분에 한 블록이 만들어지도록 맞춥니다.</p>
+<p>이 덕분에 특정 시기에 채굴자가 갑자기 늘어나도 발행 속도가 마음대로 빨라지지 않습니다.</p>
+<h2>9. 반감기와 2100만 개 공급 제한</h2>
+<p>비트코인은 새로 발행되는 양이 코드 규칙으로 정해져 있습니다. 블록 보상은 약 4년마다 절반으로 줄어드는 <b>반감기</b>를 거치며, 최종 공급량은 약 2100만 개를 넘지 않도록 설계되어 있습니다.</p>
+<p>이 구조는 중앙은행식 재량 발행과 다르게, 미리 공개된 발행 스케줄을 따르는 통화 정책입니다. 다만 희소성이 곧 가격 상승을 보장한다는 뜻은 아닙니다.</p>
+<h2>10. 탈중앙성이 의미하는 것</h2>
+<div class="grid"><div class="card"><h3>중앙 서버 없음</h3><p>하나의 회사 데이터베이스가 아니라 여러 노드가 장부를 검증합니다.</p></div><div class="card"><h3>규칙 기반 합의</h3><p>권위자를 믿기보다 공개 규칙과 검증 절차를 따릅니다.</p></div><div class="card"><h3>검열 저항성</h3><p>특정 기관이 임의로 거래를 막기 어렵게 설계되어 있습니다.</p></div></div>
+<h2>11. 장점</h2>
+<ul><li><b>투명성:</b> 누구나 장부와 발행 규칙을 검증할 수 있습니다.</li><li><b>희소성:</b> 2100만 개 제한과 반감기 구조가 있습니다.</li><li><b>국경 없는 전송:</b> 인터넷 기반으로 전 세계 전송이 가능합니다.</li><li><b>검열 저항:</b> 중앙기관 허가 없이 네트워크 참여가 가능합니다.</li><li><b>네트워크 효과:</b> 가장 오래되고 널리 알려진 블록체인 네트워크입니다.</li></ul>
+<h2>12. 한계와 비판적 관점</h2>
+<table><tr><th>쟁점</th><th>내용</th><th>균형 있게 볼 점</th></tr><tr><td>에너지</td><td>작업증명은 많은 전력을 씁니다.</td><td>보안 비용이라는 주장과 환경 부담이라는 비판이 공존합니다.</td></tr><tr><td>변동성</td><td>가격이 크게 오르내릴 수 있습니다.</td><td>개념 이해와 투자 판단은 분리해야 합니다.</td></tr><tr><td>확장성</td><td>기본 체인의 처리량은 제한적입니다.</td><td>라이트닝 네트워크 같은 보조 계층이 연구·사용됩니다.</td></tr><tr><td>규제</td><td>국가별 세금, 거래소, 결제 규칙이 다릅니다.</td><td>기술은 글로벌하지만 사용자는 현지 규정을 확인해야 합니다.</td></tr><tr><td>보안 오해</td><td>블록체인이 안전해도 개인키를 잃으면 끝입니다.</td><td>거래소 해킹, 피싱, 보관 실수는 사용자의 현실적 위험입니다.</td></tr></table>
+<h2>최종 정리</h2>
+<p>비트코인은 “누군가를 믿는 시스템”을 “누구나 검증할 수 있는 규칙의 시스템”으로 바꾸려는 시도입니다. 거래는 개인키로 승인되고, 노드는 규칙을 검증하며, 채굴자는 작업증명으로 새 블록을 붙입니다.</p>
+<p>그래서 비트코인을 이해할 때는 가격보다 먼저 <b>블록체인 장부, 해시 연결, 작업증명, 노드 검증, 발행 제한, 개인키 보관</b>을 이해하는 것이 중요합니다.</p>
+<p class="note warn"><b>주의:</b> 이 보고서는 기술·개념 설명이며, 비트코인 매수·매도·보유를 권하는 투자 조언이 아닙니다.</p>
+<hr><p><code>Jeremy's Insight by 🤖 딸깍봇</code> <code><a href="https://blog.naver.com/jeremylee0213">https://blog.naver.com/jeremylee0213</a></code></p>
+</main></div></body></html>
