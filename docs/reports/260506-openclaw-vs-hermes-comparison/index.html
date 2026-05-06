@@ -1,28 +1,100 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>오픈클로 vs 헤르메스 비교 분석 보고서</title><style>body{margin:0;background:linear-gradient(180deg,#07111f,#102543 24%,#f7f9fc 24%);color:#1d1d1f;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75}.wrap{max-width:1080px;margin:0 auto;padding:64px 24px 80px}main{background:#fff;border-radius:28px;padding:42px 34px 48px;box-shadow:0 18px 60px rgba(15,39,80,.10)}h1{font-size:40px;letter-spacing:-.04em;line-height:1.15;margin:0 0 16px;color:#111827}main h1:first-child{color:#fff;background:#102543;margin:-42px -34px 24px;padding:42px 34px 12px;border-radius:28px 28px 0 0}h2{font-size:25px;margin:46px 0 14px;color:#1455a6}h3{font-size:21px;margin:30px 0 10px;color:#1f3f7a}.hero{width:100%;border-radius:28px;box-shadow:0 24px 70px rgba(0,20,60,.22);margin:20px 0 28px;border:1px solid #e7edf7}.gallery{display:grid;gap:28px;margin:26px 0}.caption{font-weight:800;color:#0b3d91;margin:6px 0 0}.note{background:#fff8df;border:2px solid #ffe08a;border-radius:18px;padding:16px 18px;font-weight:800}table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid #dfe7f2;border-radius:18px;overflow:hidden;background:white;margin:18px 0}th{background:#edf5ff;color:#0b3d91;text-align:left}td,th{padding:13px 15px;border-bottom:1px solid #edf1f7;vertical-align:top}tr:last-child td{border-bottom:0}ul,ol{background:#fff;border:1px solid #dfe7f2;border-radius:18px;padding:18px 24px 18px 42px}li{margin:8px 0}.key-heading{font-size:31px;color:#0b3d91}.key-takeaways{background:#edf5ff;border:2px solid #bfd7ff;box-shadow:0 14px 36px rgba(15,39,80,.10);font-size:21px;font-weight:800;line-height:1.65}.small{color:#556070;font-size:14px}hr{border:0;border-top:1px solid #dfe7f2;margin:42px 0 20px}a{color:#0b63ce;font-weight:700}code{background:#edf5ff;padding:2px 6px;border-radius:6px}</style></head><body><div class="wrap"><main><h1>오픈클로 vs 헤르메스 비교 분석 보고서</h1>
-<p class="note">한 줄 결론: <b>오픈클로는 실행·자동화·게시까지 끝내는 손발이고, 헤르메스는 판단·반론·리스크를 잡아주는 전략 참모다.</b></p>
-<div class="gallery">
-  <div><p class="caption">인포그래픽 1 · 보고서모드1 기본 손그림 스타일</p><img class="hero" src="../../assets/260506-openclaw-vs-hermes-reportmode1.png" alt="오픈클로 vs 헤르메스 보고서모드1 손그림 인포그래픽"></div>
-  <div><p class="caption">인포그래픽 2 · 보고서모드2 실제 종이 스캔 느낌 손그림 스타일</p><img class="hero" src="../../assets/260506-openclaw-vs-hermes-reportmode2.png" alt="오픈클로 vs 헤르메스 보고서모드2 저숙련 손그림 인포그래픽"></div>
-  <div><p class="caption">인포그래픽 3 · 보고서모드3 깔끔한 고해상도 정보형 스타일</p><img class="hero" src="../../assets/260506-openclaw-vs-hermes-reportmode3.png" alt="오픈클로 vs 헤르메스 보고서모드3 정보형 인포그래픽"></div>
-</div>
-<h2 class="key-heading">핵심 결론</h2>
-<ol class="key-takeaways"><li>실행 자동화와 산출물 완주는 <b>OpenClaw/딸깍봇</b>이 맡는 편이 좋다.</li><li>전략 판단, 반대 의견, 구조·리스크 검토는 <b>Hermes</b>가 강하다.</li><li>최적 구조는 <b>OpenClaw가 만들고 게시하고, Hermes가 검토하고 흔드는 방식</b>이다.</li></ol>
-<h2>1. 역할 정의</h2>
-<table><tr><th>구분</th><th>OpenClaw / 딸깍봇</th><th>Hermes Agent</th></tr><tr><td>기본 역할</td><td>실행형 오케스트레이터. 요청을 받아 도구를 호출하고 파일·이미지·보고서·게시까지 이어간다.</td><td>전략 참모형 페르소나. 판단을 구조화하고 반론, 리스크, 의사결정 포인트를 잡는다.</td></tr><tr><td>운영 감각</td><td>“해줘”에 강하다. 작업을 쪼개고 실제 결과물까지 만든다.</td><td>“이게 맞나?”에 강하다. 방향성, 허점, 대안, 기준을 따진다.</td></tr><tr><td>가장 좋은 쓰임</td><td>보고서 작성, 이미지 생성, Obsidian/파일 정리, GitHub Pages 게시, 자동화 실행.</td><td>기획 검토, 투자·사업·운영 판단의 반대 의견, 토론 파트너, 리스크 리뷰.</td></tr></table>
-<h2>2. OpenClaw / 딸깍봇의 강점</h2>
-<ul><li><b>실행형 오케스트레이션:</b> 여러 도구와 파일 작업을 묶어 끝까지 진행한다.</li><li><b>도구 접근성:</b> 파일, Obsidian, GitHub Pages, 이미지 생성, 브라우저·CLI성 작업을 연결할 수 있다.</li><li><b>보고서모드 완주:</b> 주제 정리 → 인포그래픽 생성 → HTML 보고서 → GitHub Pages 게시 → URL 확인까지 맡기기 좋다.</li><li><b>자동화:</b> 반복 작업, 저장소 갱신, 일정한 형식의 산출물 생산에 강하다.</li><li><b>실무형 결과:</b> 대화 답변에서 끝나지 않고 파일과 링크로 남긴다.</li></ul>
-<h2>3. Hermes의 강점</h2>
-<ul><li><b>전략 참모형 페르소나:</b> 사용자가 운영 판단을 하도록 논점과 선택지를 정리한다.</li><li><b>비판적 관점:</b> 낙관론만 반복하지 않고 허점, 반례, 실패 가능성을 짚는다.</li><li><b>구조/리스크 분석:</b> “왜 이 판단이 위험한가”, “무엇을 먼저 확인해야 하는가”를 잘 나눈다.</li><li><b>토론 파트너:</b> 딸깍봇이 실행 관점에서 본 것을 Hermes가 전략 관점에서 흔들 수 있다.</li></ul>
-<h2>4. 공통 적용 지침</h2>
-<table><tr><th>공통 규칙</th><th>의미</th></tr><tr><td>보고서모드</td><td>공개 가능한 주제는 조사·분석·인포그래픽·GitHub Pages 게시까지 진행한다. 1/2/3 통합 요청 시 파일과 URL은 하나만 만들고 인포그래픽 3개를 한 보고서에 넣는다.</td></tr><tr><td>YouTube 요약</td><td>공개 링크 기반으로 짧은 요약 형식을 따른다. 개인 자료나 비공개 메모리는 근거로 쓰지 않는다.</td></tr><tr><td>단체방 안전 규칙</td><td>개인정보, 비공개 파일, Obsidian/Wiki/메모리 원문, 민감정보는 단체방에 노출하지 않는다.</td></tr><tr><td>역할 대행 금지</td><td>딸깍봇은 Hermes 발언을 대신 쓰지 않고, Hermes도 딸깍봇의 실행 결과를 대신 완료 처리하지 않는다.</td></tr></table>
-<h2>5. 핵심 차이</h2>
-<table><tr><th>항목</th><th>OpenClaw / 딸깍봇</th><th>Hermes</th></tr><tr><td>실행 도구 권한</td><td>도구 호출과 파일 작업을 직접 수행할 수 있어 실제 산출물을 만든다.</td><td>도구 권한이 없거나 제한되면 지침이 있어도 실제 완주는 어렵다.</td></tr><tr><td>보고서 완주 능력</td><td>보고서 파일, 이미지 3개, GitHub Pages URL 확인까지 이어가기 적합하다.</td><td>보고서의 논리·리스크 검토는 강하지만 게시 실행은 권한에 좌우된다.</td></tr><tr><td>이미지 생성 구현</td><td>image_generate 같은 도구 접근이 있으면 직접 생성·삽입 가능하다.</td><td>동일 지침이 있어도 실제 이미지 생성 도구가 없으면 대체 텍스트에 그칠 수 있다.</td></tr><tr><td>메시지 전달 안정성</td><td>실행 결과와 완료 알림을 관리해야 한다. 긴 작업에서는 원 요청 추적이 중요하다.</td><td>토론·분석 메시지는 안정적일 수 있으나, 외부 게시 완료 보장은 별도 실행 체계가 필요하다.</td></tr><tr><td>역할 대행</td><td>Hermes의 최종 브리핑을 대신 쓰면 안 된다.</td><td>딸깍봇의 도구 실행 완료를 대신 선언하면 안 된다.</td></tr></table>
-<h2>6. 어떤 상황에서 무엇을 쓰면 좋은가</h2>
-<table><tr><th>상황</th><th>추천</th><th>이유</th></tr><tr><td>블로그/보고서/인포그래픽/게시까지 필요</td><td>OpenClaw 우선</td><td>파일·이미지·GitHub Pages까지 실행할 수 있기 때문.</td></tr><tr><td>운영 전략을 정해야 함</td><td>Hermes 우선</td><td>기준, 반론, 리스크, 선택지를 잡는 데 강하기 때문.</td></tr><tr><td>중요한 의사결정</td><td>OpenClaw + Hermes</td><td>OpenClaw가 자료와 초안을 만들고 Hermes가 허점을 검토하는 조합이 좋다.</td></tr><tr><td>단체방 공개 대응</td><td>둘 다 안전 규칙 우선</td><td>개인정보·비공개 자료 노출 위험이 최우선 리스크다.</td></tr></table>
-<h2>7. 통합 운영 구조 추천</h2>
-<ol><li><b>OpenClaw가 실행 담당:</b> 자료 정리, 파일 생성, 이미지 생성, GitHub Pages 게시, 자동화.</li><li><b>Hermes가 검토 담당:</b> 결론의 과장 여부, 빠진 리스크, 반대 논리, 운영 기준 확인.</li><li><b>최종 산출은 OpenClaw가 마감:</b> Hermes 검토를 반영한 뒤 하나의 보고서·하나의 URL로 정리.</li><li><b>단체방에서는 공개 정보만:</b> 개인 파일명, 경로, 메모리, 설정, 토큰, 민감정보는 출력하지 않는다.</li></ol>
-<h2>8. 리스크와 한계</h2>
-<ul><li><b>도구 권한 리스크:</b> Hermes에 보고서모드 지침이 있어도 실제 도구 권한이 없으면 이미지 생성·파일 저장·GitHub Pages 게시를 완주할 수 없다.</li><li><b>역할 대행 리스크:</b> 봇끼리 서로의 발언을 대신 쓰면 토론의 의미와 책임 경계가 흐려진다.</li><li><b>단체방 개인정보 제한:</b> 공개 채널에서는 개인 파일, 메모리, 민감한 운영 정보, 비공개 맥락을 노출하면 안 된다.</li><li><b>완료 알림 리스크:</b> 긴 작업은 결과물만 생기고 사용자 알림이 누락될 수 있어 원 요청 추적과 독립 완료 알림이 필요하다.</li></ul>
-<h2>최종 판단</h2>
-<p>주인님 관점에서 둘 중 하나를 고르는 문제가 아니라 <b>역할을 분리해 함께 쓰는 문제</b>다. OpenClaw는 실제로 만들고 움직이는 실행 엔진이고, Hermes는 판단을 더 날카롭게 만드는 전략 참모다. 보고서모드처럼 결과물이 필요한 작업은 OpenClaw가 주도하고, 중요한 결론이나 운영 정책은 Hermes가 검토하는 구조가 가장 실용적이다.</p>
-<hr><p class="small">이 보고서는 공개 가능한 일반 운영 맥락과 현재 요청에서 제공된 기준만 바탕으로 작성했습니다. 비공개 메모리, 개인 파일 원문, secret/config/token 값은 포함하지 않았습니다.</p><p><code>Jeremy's Insight by 🤖 딸깍봇</code> <code><a href="https://blog.naver.com/jeremylee0213">https://blog.naver.com/jeremylee0213</a></code></p></main></div></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오픈클로 vs 헤르메스 비교 분석 보고서</title>
+  <meta name="description" content="공개 정보와 현재 대화 맥락만으로 정리한 오픈클로 vs 헤르메스 역할 비교 보고서. LLM-Wiki/Obsidian은 내용 근거로 사용하지 않음.">
+  <style>
+    :root{--bg:#f6f8fc;--card:#fff;--ink:#1d2433;--muted:#667085;--line:#dfe7f2;--blue:#2457d6;--green:#138a66;--orange:#d97706;--red:#c2410c}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans KR',Arial,sans-serif;line-height:1.72}
+    .wrap{max-width:1040px;margin:0 auto;padding:56px 22px 88px}.hero{background:linear-gradient(135deg,#eef5ff,#fff7ed);border:1px solid var(--line);border-radius:28px;padding:34px 30px;box-shadow:0 18px 50px rgba(35,57,91,.08)}
+    h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.16;margin:0 0 14px;letter-spacing:-.04em} h2{font-size:1.55rem;margin:42px 0 16px;letter-spacing:-.03em} h3{font-size:1.16rem;margin:24px 0 10px}.meta{color:var(--muted);font-size:.95rem}.badge{display:inline-block;background:#eaf1ff;color:#214bb5;border:1px solid #cfdcff;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.9rem;margin:4px 6px 4px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;margin-top:22px;box-shadow:0 10px 28px rgba(35,57,91,.05)}.lead{font-size:1.12rem;color:#334155}.conclusion{background:#101828;color:#fff;border-radius:22px;padding:26px;margin-top:24px}.conclusion h2{margin-top:0;color:#fff}.conclusion li{margin:9px 0;font-size:1.08rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.col{border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff}.col h3{margin-top:0}.openclaw{border-top:6px solid var(--blue)}.hermes{border-top:6px solid var(--green)}table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}th,td{border:1px solid var(--line);padding:14px;vertical-align:top}th{background:#f1f5ff;text-align:left}.note{background:#fff8e6;border:1px solid #fed7aa;border-radius:18px;padding:18px;color:#7c2d12}.risk{background:#fff1f2;border-color:#fecdd3}.imgbox{margin:28px 0;background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px}.imgbox img{width:100%;display:block;border-radius:18px;border:1px solid #e5e7eb}.caption{font-size:.92rem;color:var(--muted);margin-top:10px}.src{font-size:.95rem;color:var(--muted)}a{color:#2457d6;font-weight:700}@media(max-width:760px){.grid{grid-template-columns:1fr}.wrap{padding:32px 16px}.hero{padding:26px 20px}th,td{display:block;width:100%}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <span class="badge">보고서모드1·2·3 통합</span><span class="badge">공개 정보 + 현재 대화 맥락</span><span class="badge">LLM-Wiki/Obsidian 근거 미사용</span>
+    <h1>오픈클로 vs 헤르메스 비교 분석 보고서</h1>
+    <p class="meta">작성일: 2026-05-06 · 기준: 사용자가 현재 대화에서 제공한 역할 구분과 공개 가능한 일반 개념</p>
+    <p class="lead">오픈클로와 헤르메스는 “어느 쪽이 더 좋은가”로 비교하기보다, <strong>실행 계층</strong>과 <strong>판단 계층</strong>의 역할 분담으로 보는 편이 정확하다. 오픈클로는 도구·파일·워크플로우를 움직이는 손과 발에 가깝고, 헤르메스는 전략·리스크·의사결정 프레임을 다듬는 관점에 가깝다.</p>
+  </section>
+
+  <section class="conclusion">
+    <h2>핵심 결론</h2>
+    <ol>
+      <li><strong>오픈클로는 실행 인프라에 가까움.</strong> 파일 작업, 이미지 생성, 보고서 게시, 자동화처럼 “실제로 처리하는 일”에 강함.</li>
+      <li><strong>헤르메스는 전략 에이전트에 가까움.</strong> 현실 판단, 리스크 점검, 말투·브리핑 일관성, 의사결정 보조에 강함.</li>
+      <li><strong>둘은 경쟁 관계보다 계층 관계임.</strong> 오픈클로가 작업을 실행하고, 헤르메스가 관점과 판단을 보강하는 조합이 가장 실용적임.</li>
+      <li><strong>핵심 리스크는 경계 혼선임.</strong> 누가 실행하고, 누가 판단하며, 어떤 자료를 근거로 쓰는지 분리하지 않으면 공개 게시·개인정보·품질 문제가 생김.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>1. 한 줄 정의</h2>
+    <div class="grid">
+      <div class="col openclaw"><h3>오픈클로</h3><p><strong>개인 비서 실행 환경.</strong> 사용자의 요청을 받아 도구 호출, 파일 생성·수정, 이미지 생성, GitHub Pages 게시, 작업 자동화 같은 실행을 담당하는 운영 레이어다.</p></div>
+      <div class="col hermes"><h3>헤르메스</h3><p><strong>전략·판단 에이전트.</strong> 같은 작업을 하더라도 더 비판적이고 구조적으로 보고, 리스크·판세·의사결정 프레임을 정리하는 역할에 가깝다.</p></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2. 비교표</h2>
+    <table>
+      <thead><tr><th>구분</th><th>오픈클로</th><th>헤르메스</th></tr></thead>
+      <tbody>
+        <tr><td>핵심 역할</td><td>작업 실행, 도구 연결, 산출물 생성</td><td>판단 프레임, 전략 해석, 리스크 점검</td></tr>
+        <tr><td>강점</td><td>파일·이미지·코드·게시 작업을 실제로 끝까지 밀어붙임</td><td>복잡한 상황을 구조화하고, 반대 관점과 실패 시나리오를 끌어냄</td></tr>
+        <tr><td>보고서모드에서의 역할</td><td>조사, 이미지 생성, HTML 작성, GitHub Pages 게시</td><td>논리 구조, 결론 강도, 리스크·반론·전략적 메시지 보강</td></tr>
+        <tr><td>주의점</td><td>실행력이 강한 만큼 공개 게시·파일 작업 전 자료 경계를 엄격히 확인해야 함</td><td>전략적 해석이 강한 만큼 사실 근거와 추정의 경계를 분리해야 함</td></tr>
+        <tr><td>좋은 조합</td><td colspan="2">헤르메스가 판단 프레임을 세우고, 오픈클로가 실행·게시까지 마무리하는 구조</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>3. 역할 분담 관점</h2>
+    <p>AI 비서를 오래 쓰려면 “똑똑한 답변”보다 <strong>역할 경계</strong>가 중요하다. 오픈클로가 모든 판단까지 떠안으면 실행 중 실수가 커질 수 있고, 헤르메스가 실행까지 직접 담당한다고 가정하면 실제 산출물 관리가 흐려질 수 있다.</p>
+    <p>따라서 가장 안정적인 구조는 다음과 같다.</p>
+    <ol>
+      <li><strong>헤르메스:</strong> 문제 정의, 판단 기준, 리스크, 반대의견 정리</li>
+      <li><strong>오픈클로:</strong> 자료 수집 범위 확인, 이미지 생성, 문서화, 게시, 검증</li>
+      <li><strong>공통 안전선:</strong> 개인 자료·LLM-Wiki·Obsidian·메모리는 보고서 내용 근거로 사용하지 않음</li>
+    </ol>
+  </section>
+
+  <section class="card risk">
+    <h2>4. 약점과 실패 시나리오</h2>
+    <ul>
+      <li><strong>경계 혼선:</strong> “전략 에이전트”와 “실행 에이전트” 역할이 섞이면 책임과 검증 위치가 흐려진다.</li>
+      <li><strong>근거 오염:</strong> 공개 보고서에 개인 자료나 비공개 위키 맥락이 섞이면 신뢰성과 개인정보 안전이 동시에 깨진다.</li>
+      <li><strong>브랜드 혼동:</strong> 오픈클로와 헤르메스의 말투·정체성이 섞이면 사용자는 어느 에이전트의 판단인지 알기 어렵다.</li>
+      <li><strong>자동화 과신:</strong> 실행 자동화가 강할수록 게시 전 소스 제한, 링크 검증, 이미지 포함 여부 확인이 더 중요하다.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>5. 추천 운영안</h2>
+    <ol>
+      <li><strong>오픈클로 = 실행 담당</strong>으로 둔다. 파일, 이미지, 게시, 검증을 맡긴다.</li>
+      <li><strong>헤르메스 = 전략 담당</strong>으로 둔다. 결론, 리스크, 반론, 의사결정 프레임을 맡긴다.</li>
+      <li><strong>보고서모드 자료 원칙</strong>은 둘 다 동일하게 적용한다. 공개 웹·공개 자료·현재 대화에서 제공된 공개 가능한 내용만 사용한다.</li>
+      <li><strong>완료 기준</strong>은 URL과 검증이다. 공개 가능한 보고서는 GitHub Pages 링크 없이 완료 처리하지 않는다.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>6. 인포그래픽 3종</h2>
+    <div class="imgbox"><h3>보고서모드1 — 기본 손그림 스타일</h3><img src="../../assets/260506-openclaw-vs-hermes-reportmode1-public-only.png" alt="오픈클로 vs 헤르메스 보고서모드1 손그림 인포그래픽"><p class="caption">미색 종이·색연필·크레용 느낌의 학습 노트형 비교.</p></div>
+    <div class="imgbox"><h3>보고서모드2 — 저숙련 종이 스캔 손그림</h3><img src="../../assets/260506-openclaw-vs-hermes-reportmode2-public-only.png" alt="오픈클로 vs 헤르메스 보고서모드2 종이 스캔 인포그래픽"><p class="caption">삐뚤빼뚤한 손글씨와 실제 스캔 종이 느낌을 강조한 버전.</p></div>
+    <div class="imgbox"><h3>보고서모드3 — 깔끔한 고해상도 정보형</h3><img src="../../assets/260506-openclaw-vs-hermes-reportmode3-public-only.png" alt="오픈클로 vs 헤르메스 보고서모드3 깔끔한 정보형 인포그래픽"><p class="caption">2열 비교표와 결론을 중심으로 정리한 정보형 버전.</p></div>
+  </section>
+
+  <section class="card note">
+    <h2>자료 사용 기준</h2>
+    <p>이 보고서는 <strong>공개 가능한 일반 정보와 현재 대화에서 제공된 맥락</strong>만 기준으로 작성했다. 보고서 내용의 근거로 주인님의 LLM-Wiki, Obsidian Vault, 메모리, 개인 파일, 비공개 자료를 사용하지 않았다. 운영 템플릿·저장소 구조·렌더링/게시 방식은 작업 수행을 위한 도구로만 사용했다.</p>
+  </section>
+</main>
+</body>
+</html>
