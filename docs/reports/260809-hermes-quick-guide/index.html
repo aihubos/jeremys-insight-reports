@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>헤르메스 이용 가이드북: 이미지모드·보고서모드</title>
+<meta name="description" content="처음 사용하는 사람을 위한 헤르메스 질문법, 이미지모드, 보고서모드 간단 가이드">
+<style>
+:root{--page:#f5f7fa;--paper:#fff;--text:#191f28;--muted:#6b7684;--accent:#3182f6;--accent-soft:#eaf3ff;--yellow:#ffe066;--line:#e5e8eb;--warn:#fff6d8;--good:#edf8ef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--page);color:var(--text);font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:18px;line-height:1.72;word-break:keep-all}.wrap{max-width:1120px;margin:0 auto;padding:42px 24px 80px}.paper{background:var(--paper);border-radius:24px;box-shadow:0 18px 60px rgba(25,31,40,.08);overflow:hidden}.cover{padding:64px 64px 38px;background:linear-gradient(140deg,#fff 62%,#eaf3ff)}.eyebrow{color:var(--accent);font-weight:800;letter-spacing:.08em}.cover h1{font-size:clamp(42px,6vw,72px);line-height:1.08;letter-spacing:-.055em;margin:18px 0}.lead{font-size:24px;font-weight:700;max-width:850px;margin:0}.date{color:var(--muted);margin-top:20px}.hero{display:block;width:calc(100% - 64px);margin:32px;border:1px solid var(--line);border-radius:22px;box-shadow:0 15px 45px rgba(49,130,246,.12)}.caption{margin:-18px 32px 34px;color:var(--muted);font-size:14px}.content{padding:10px 64px 64px}.verdict{background:var(--accent-soft);border:2px solid #b8d7ff;border-radius:20px;padding:24px 28px;font-size:23px;font-weight:800}.mark{background:linear-gradient(transparent 57%,rgba(255,224,102,.78) 57%)}h2{font-size:32px;line-height:1.25;margin:58px 0 18px;letter-spacing:-.035em;color:#1b64da}h3{font-size:23px;margin:34px 0 10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff}.card strong{color:#135fc7}.number{display:inline-grid;place-items:center;background:var(--accent);color:#fff;border-radius:50%;width:30px;height:30px;margin-right:8px;font-size:15px}.callout{border-left:5px solid #f2ad00;background:var(--warn);border-radius:0 16px 16px 0;padding:18px 22px;margin:24px 0}.good{background:var(--good);border-left-color:#35a854}table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:20px 0 28px;font-size:16px}th{background:var(--accent-soft);color:#135fc7;text-align:left;font-weight:800}th,td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border-bottom:0}ul,ol{padding-left:26px}li{margin:8px 0}a{color:#1269d3;font-weight:700}.sources{font-size:14px}.sources td{word-break:break-word}.footer-note{color:var(--muted);font-size:15px}.check{list-style:none;padding-left:0}.check li{padding:12px 16px;border:1px solid var(--line);border-radius:12px;margin:10px 0}.check li::before{content:'✓';display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#e7f6ec;color:#24843c;font-weight:900;margin-right:10px}@media(max-width:700px){body{font-size:16px}.wrap{padding:0}.paper{border-radius:0}.cover{padding:40px 22px 28px}.lead{font-size:20px}.hero{width:calc(100% - 28px);margin:20px 14px}.caption{margin:-10px 16px 24px}.content{padding:8px 22px 40px}.grid{grid-template-columns:1fr}.verdict{font-size:20px;padding:20px}h2{font-size:27px}table{display:block;overflow-x:auto;white-space:normal}}@media print{body{background:#fff}.wrap{padding:0}.paper{box-shadow:none}.cover{padding-top:28px}.hero,table,.card,.verdict{break-inside:avoid}a{color:inherit;text-decoration:none}}
+.top-conclusion{margin:0 0 24px;background:var(--accent-soft);border:2px solid #b8d7ff;border-radius:20px;padding:20px 24px}.top-conclusion-label{display:block;color:#135fc7;font-weight:900;margin-bottom:8px}.verdict-line{display:flex;gap:10px;margin:8px 0}.verdict-num{color:var(--accent);font-weight:900}.verdict-text{display:block}.highlight-sweep{background:linear-gradient(transparent 56%,rgba(255,224,102,.8) 56%)}.floating-menu{position:fixed;left:24px;top:50%;transform:translateY(-50%);z-index:4;display:grid;gap:8px}.floating-action{display:block;background:#fff;border:1px solid #b8d7ff;border-radius:12px;padding:9px 12px;text-decoration:none;font-size:14px;box-shadow:0 6px 18px rgba(25,31,40,.1)}.floating-action.is-active{background:var(--accent);color:#fff;border-color:var(--yellow)}.reaction-card{border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0}.reaction-meta{color:var(--muted);font-size:14px}.sources th:nth-child(4),.sources td:nth-child(4){width:12%;word-break:break-all;overflow-wrap:anywhere}
+</style>
+<script id="report-floating-nav-script">document.addEventListener('DOMContentLoaded',()=>{const a=[...document.querySelectorAll('.floating-action')];const run=()=>{let cur=a[0];for(const x of a){const t=document.querySelector(x.getAttribute('href'));if(t&&t.getBoundingClientRect().top<=180)cur=x}a.forEach(x=>{const on=x===cur;x.classList.toggle('is-active',on);if(on)x.setAttribute('aria-current','location');else x.removeAttribute('aria-current')})};addEventListener('scroll',run,{passive:true});run()})</script>
+</head>
+<body><div class="wrap"><article class="paper">
+<nav class="floating-menu" aria-label="문서 바로가기"><a class="floating-action" href="#basic">기본</a><a class="floating-action" href="#image-mode">이미지</a><a class="floating-action" href="#report-mode">보고서</a><a class="floating-action" href="#public-reaction">문서</a><a class="floating-action" href="#sources">출처</a></nav><header class="cover"><div class="eyebrow">260809 · BEGINNER GUIDE</div><h1>헤르메스<br>이용 가이드북</h1><section class="top-conclusion"><span class="top-conclusion-label">핵심 결론</span><div class="verdict-line"><span class="verdict-num">01</span><span class="verdict-text">먼저 <mark class="highlight-sweep">목적과 결과 형식</mark>을 함께 말하면 됩니다.</span></div><div class="verdict-line"><span class="verdict-num">02</span><span class="verdict-text">이미지가 필요하면 <mark class="highlight-sweep">이미지모드</mark>를 붙입니다.</span></div><div class="verdict-line"><span class="verdict-num">03</span><span class="verdict-text">조사·공유가 필요하면 <mark class="highlight-sweep">보고서모드</mark>를 요청합니다.</span></div></section><p class="lead">질문 하나로 시작하고, <span class="mark">이미지와 보고서</span>까지 결과물로 받는 법.</p><p class="date">2026.08.09 KST · 공개 문서 기반</p></header>
+<img class="hero" src="../../assets/260809-hermes-quick-guide/hermes-quick-guide-hero.png" alt="헤르메스 질문하기, 이미지모드, 보고서모드를 설명하는 화이트보드 두들 인포그래픽">
+<p class="caption">AI 생성 인포그래픽 · Hermes 공식 로고 또는 공식 제품 이미지 아님</p>
+<div class="content">
+<h2>📌 핵심 결론</h2><div class="verdict">헤르메스는 <span class="mark">원하는 결과와 맥락을 자연어로 말할수록</span> 더 실무적인 답을 만드는 AI 에이전트입니다. 처음에는 ‘무엇을, 어떤 형식으로, 언제까지’만 붙여 질문하세요.</div>
+<div class="grid" style="margin-top:16px"><div class="card"><strong>01 · 가장 쉬운 시작</strong><br>“회의 준비해줘”, “이 링크 5줄 요약해줘”처럼 목적부터 말합니다.</div><div class="card"><strong>02 · 결과물 요청</strong><br>이미지가 필요하면 이미지모드, 조사·공유용 문서가 필요하면 보고서모드를 붙입니다.</div></div>
+
+<h2 id="basic">🧭 1. 기본 이용법</h2>
+<p>헤르메스는 대화형 답변만 하는 도구가 아니라, 설정된 도구를 통해 웹 검색·브라우저·파일·이미지 생성·일정 자동화 등을 연결할 수 있는 에이전트입니다. 다만 <b>가능한 도구와 권한은 설치·플랫폼 설정에 따라 달라집니다.</b></p>
+<table><thead><tr><th>이렇게 말해보세요</th><th>좋은 이유</th></tr></thead><tbody>
+<tr><td>“AI 에이전트가 뭔지 초보자 눈높이로 설명해줘.”</td><td>난이도와 결과 형식이 명확합니다.</td></tr>
+<tr><td>“이 기사 핵심·장점·리스크를 5줄로 정리해줘.”</td><td>분량과 판단 기준을 함께 줍니다.</td></tr>
+<tr><td>“내일 회의 준비: 확인할 질문 5개와 마무리 멘트 작성해줘.”</td><td>바로 사용할 산출물의 형태가 정해집니다.</td></tr>
+</tbody></table>
+<div class="callout good"><b>질문 공식:</b> <code>목적 + 대상/맥락 + 원하는 형식 + 제약</code><br>예: “AI 공부방 초보자를 대상으로, 이미지모드 사용법을 3문장으로 설명해줘.”</div>
+
+<h2 id="image-mode">🖼️ 2. 이미지모드</h2>
+<p><b>이미지모드</b>는 이 환경에서 쓰는 간단한 요청 방식입니다. “이미지모드” 뒤에 용도·주제·스타일을 붙이면, 헤르메스가 텍스트 설명으로 끝내지 않고 실제 이미지 생성 도구를 사용해 결과물을 만듭니다.</p>
+<table><thead><tr><th>요청 예시</th><th>기대 결과</th></tr></thead><tbody>
+<tr><td><code>이미지모드, AI 공부방 홍보 포스터. 밝은 화이트보드 두들 스타일.</code></td><td>홍보에 쓸 수 있는 세로/가로형 이미지 생성</td></tr>
+<tr><td><code>이미지모드, 블로그 썸네일. ‘AI 자동화’가 크게 보이게.</code></td><td>주제와 사용처에 맞춘 썸네일 이미지</td></tr>
+<tr><td><code>하찮은모드, 이 사진을 그림판 낙서처럼 바꿔줘.</code></td><td>첨부 이미지를 참고한 투박하고 귀여운 재해석</td></tr>
+</tbody></table>
+<ul class="check"><li>원하는 <b>용도</b>를 먼저 말합니다: 포스터, 썸네일, 카드뉴스, 발표 표지.</li><li><b>비율</b>도 정합니다: 가로형·정사각형·세로형.</li><li>이미지 속 한글은 짧고 크게 요청하는 편이 깨짐을 줄입니다.</li><li>실제 인물 사진을 바꿀 때는 첨부 원본을 함께 보내고 보존할 특징을 말합니다.</li></ul>
+<div class="callout"><b>주의:</b> 이미지 생성은 설정된 이미지 도구가 있을 때만 가능합니다. 고유한 숫자·날짜·사실은 이미지 안에 길게 넣기보다, 생성 후 본문이나 캡션으로 확인하는 편이 안전합니다.</div>
+
+<h2 id="report-mode">📑 3. 보고서모드</h2>
+<p><b>보고서모드</b>는 이 환경에서 구성한 조사·분석·시각화·공개 배포 워크플로입니다. 단순 채팅 요약보다 한 단계 더 나아가, 공개 자료를 조사하고 핵심 판단·반대 의견·리스크를 정리한 뒤 인포그래픽과 공유용 웹페이지까지 만듭니다.</p>
+<table><thead><tr><th>요청 예시</th><th>작업 흐름</th></tr></thead><tbody>
+<tr><td><code>보고서모드, 2026년 AI 에이전트 시장 전망</code></td><td>공개 자료 조사 → 핵심 판단·리스크 → 인포그래픽 → 공개 가이드 페이지</td></tr>
+<tr><td><code>보고서모드2, AI 자동화 도입의 장점과 실패 사례</code></td><td>조사 결과를 더 투박한 종이 손그림 스타일로 시각화</td></tr>
+<tr><td><code>보고서모드3, 생성형 AI 보안 리스크</code></td><td>깔끔한 정보형 인포그래픽 중심의 공개 보고서</td></tr>
+</tbody></table>
+<div class="grid"><div class="card"><strong><span class="number">1</span>조사</strong><br>공식 문서와 공개 자료를 우선 확인해 사실·분석·전망을 구분합니다.</div><div class="card"><strong><span class="number">2</span>판단</strong><br>좋은 점만 쓰지 않고 대안, 반대 논리, 실패 조건도 함께 적습니다.</div><div class="card"><strong><span class="number">3</span>시각화</strong><br>핵심을 한 장의 인포그래픽으로 압축해 읽는 부담을 줄입니다.</div><div class="card"><strong><span class="number">4</span>공유</strong><br>공개 가능한 내용이면 링크로 열어볼 수 있는 웹페이지로 배포·검수합니다.</div></div>
+<div class="callout"><b>중요:</b> 보고서모드는 이 봇의 운영 워크플로입니다. Hermes Agent의 모든 설치 환경에 같은 이름의 기본 명령으로 내장된 기능이라고 보기는 어렵습니다. 공개 보고서에는 공개 웹 자료와 대화에서 직접 제공된 공개 가능한 내용만 씁니다.</div>
+
+<h2>⚖️ 4. 잘 쓰는 사람의 요청 방식</h2>
+<table><thead><tr><th>애매한 요청</th><th>더 좋은 요청</th></tr></thead><tbody>
+<tr><td>“AI 좀 알려줘.”</td><td>“AI 에이전트와 챗봇의 차이를 비전공자용 표로 설명해줘.”</td></tr>
+<tr><td>“이미지 만들어줘.”</td><td>“이미지모드, 텔레그램 공지용 정사각 카드뉴스. 흰 배경·파란 포인트·문구는 5단어 이내.”</td></tr>
+<tr><td>“조사해줘.”</td><td>“보고서모드, AI 에이전트 도입 시 보안 리스크. 경영진용, 장점·반대 의견·실행 체크리스트 포함.”</td></tr>
+</tbody></table>
+
+<h2>⚠️ 5. 현실적인 한계와 안전선</h2>
+<ul><li>도구 접근, 로그인 상태, 권한, 웹페이지 정책에 따라 가능한 작업 범위가 달라질 수 있습니다.</li><li>웹에서 찾은 정보도 틀리거나 오래됐을 수 있습니다. 중요한 금액·계약·의료·법률·투자 판단은 원문과 전문가 확인이 필요합니다.</li><li>개인정보, 회사 내부자료, 비공개 문서는 공개 보고서나 단체방용 요청에 넣지 않는 편이 안전합니다.</li><li>좋은 프롬프트는 마법 주문이 아닙니다. 실제로 쓸 결과물인지 검토하고, 수정 요청을 한 번 더 주는 것이 품질을 올립니다.</li></ul>
+
+<h2>✅ 6. 바로 복사해 쓸 문장</h2>
+<ul class="check"><li><code>이 링크를 초보자용으로 5줄 요약해줘. 핵심·장점·한계·결론 순서로.</code></li><li><code>이미지모드, AI 스터디 모집용 가로 포스터. 화이트보드 두들, 밝고 친근하게.</code></li><li><code>보고서모드, AI 에이전트가 바꾸는 사무직 업무. 근거·반대 의견·리스크·실행 체크리스트 포함.</code></li></ul>
+
+<h2 id="public-reaction">🔎 공개 문서에서 확인할 수 있는 기능</h2><div><article class="reaction-card"><div class="reaction-meta">Hermes 공식 문서 · Nous Research · 2026-08-09 · 기능 안내</div>도구와 도구세트는 플랫폼별로 켜고 끌 수 있으며 웹·브라우저·이미지 생성 등을 포함합니다. <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/tools" target="_blank" rel="noopener">원문 보기</a></article><article class="reaction-card"><div class="reaction-meta">Hermes 공식 문서 · Nous Research · 2026-08-09 · 기능 안내</div>스킬은 필요할 때 불러오는 지식 문서로 반복 업무의 일관성을 높이는 데 쓰입니다. <a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/skills" target="_blank" rel="noopener">원문 보기</a></article><article class="reaction-card"><div class="reaction-meta">Hermes 공식 문서 · Nous Research · 2026-08-09 · 제품 개요</div>Hermes는 여러 채널과 도구를 연결하는 자율형 에이전트로 소개됩니다. <a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">원문 보기</a></article></div><p class="footer-note">위 항목은 사용자 여론이 아니라 공개 공식 문서의 기능 설명을 짧게 정리한 것입니다.</p><h2>🔎 작성 기준·한계</h2>
+<ul><li><b>질문:</b> 처음 쓰는 사람이 헤르메스를 어떻게 요청하고, 이미지모드·보고서모드를 언제 쓰면 좋은가?</li><li><b>방법:</b> Hermes Agent의 공개 공식 문서에서 도구, 스킬, 이미지 생성, 웹 조사 기능을 확인하고 이 환경의 공개 가능한 요청 규칙을 구분해 설명했습니다.</li><li><b>한계:</b> 기능·도구의 활성화 여부는 설치 환경, 인증, 플랫폼 권한에 따라 다릅니다. 이 문서는 특정 환경의 공개형 사용 안내이며 보안 설정 가이드가 아닙니다.</li></ul>
+
+<details id="sources"><summary><b>📚 전체 출처 · 클릭하여 펼치기</b></summary><table class="sources"><thead><tr><th>유형</th><th>자료명</th><th>제공자·저작자</th><th>원문</th><th>날짜</th><th>라이선스·상태</th><th>사용 범위</th></tr></thead><tbody>
+<tr><td>공식 문서</td><td>Hermes Agent Documentation</td><td>Nous Research</td><td><a href="https://hermes-agent.nousresearch.com/docs" target="_blank" rel="noopener">원문 보기</a></td><td>2026-08-09</td><td>공개 공식 문서</td><td>Hermes 개요, 설치·기능 범위</td></tr>
+<tr><td>공식 문서</td><td>Tools &amp; Toolsets</td><td>Nous Research</td><td><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/tools" target="_blank" rel="noopener">원문 보기</a></td><td>2026-08-09</td><td>공개 공식 문서</td><td>웹·브라우저·이미지 생성 등 도구 범주</td></tr>
+<tr><td>공식 문서</td><td>Skills System</td><td>Nous Research</td><td><a href="https://hermes-agent.nousresearch.com/docs/user-guide/features/skills" target="_blank" rel="noopener">원문 보기</a></td><td>2026-08-09</td><td>공개 공식 문서</td><td>온디맨드 스킬과 재사용 지식 설명</td></tr>
+<tr><td>AI 생성 이미지</td><td>헤르메스 이용 가이드 화이트보드 인포그래픽</td><td>OpenAI 이미지 생성 도구</td><td>보고서 내부 자산</td><td>2026-08-09</td><td>AI 생성 · 공식 로고 아님</td><td>상단 시각자료</td></tr>
+</tbody></table></details>
+</div></article></div></body></html>
