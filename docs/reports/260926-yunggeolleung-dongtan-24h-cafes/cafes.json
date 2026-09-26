@@ -1,0 +1,777 @@
+{
+ "checked": "2026-09-26",
+ "cafes": [
+  {
+   "name": "스테이커피 한신대점 x 프린트",
+   "address": "경기 오산시 한신대길 134 103호",
+   "map_url": "https://map.naver.com/p/entry/place/1039311747",
+   "source_url": "https://m.place.naver.com/place/1039311747/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2026-03-15",
+   "on_route": true,
+   "dist_km": 0.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "데이롱카페 병점복합타운점",
+   "address": "경기 화성시 병점구 병점노을5로 26 103호",
+   "map_url": "https://map.naver.com/p/entry/place/2002904518",
+   "source_url": "https://m.place.naver.com/place/2002904518/home",
+   "staffed": "미확인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-09-09",
+   "on_route": true,
+   "dist_km": 0.9,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "쿠모커피하우스",
+   "address": "경기 화성시 병점구 떡전골로 60 106동 1층 114호",
+   "map_url": "https://map.naver.com/p/entry/place/2010384726",
+   "source_url": "https://m.place.naver.com/place/2010384726/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 주차는 해링턴플레이스 건물 지하주차장을 이용해 주세요. 매장과 같은 건물 내 지하주차장이라 편리하게 이용하실 수 있습니다.",
+   "evidence_date": "최근 리뷰 2026-02-11",
+   "on_route": true,
+   "dist_km": 1.0,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "카페프리헷 동탄호수공원리슈빌점 24시 무인카페",
+   "address": "경기 화성시 동탄구 동탄대로3길 34 근린생활시설동 1층 107호",
+   "map_url": "https://map.naver.com/p/entry/place/1717177826",
+   "source_url": "https://m.place.naver.com/place/1717177826/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 리슈빌 아파트 정문 로터리 통과하여 상가 뒤에 위치한 1층 야외 주차장에 주차 가능합니다.",
+   "evidence_date": "최근 리뷰 2026-09-13",
+   "on_route": true,
+   "dist_km": 1.1,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "데이롱카페 병점역점",
+   "address": "경기 화성시 병점구 떡전골로 104-7 1층 101호",
+   "map_url": "https://map.naver.com/p/entry/place/1628078557",
+   "source_url": "https://m.place.naver.com/place/1628078557/home",
+   "staffed": "무인",
+   "parking": "동부출장소에 주차하시면 1시간 반 무료입니다",
+   "evidence_date": "최근 리뷰 2026-07-03",
+   "on_route": true,
+   "dist_km": 1.2,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "무무커피 남동탄부영점",
+   "address": "경기 화성시 동탄구 동탄대로6길 50 상가동 2층 203호",
+   "map_url": "https://map.naver.com/p/entry/place/1902001578",
+   "source_url": "https://m.place.naver.com/place/1902001578/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2026-07-17",
+   "on_route": true,
+   "dist_km": 1.3,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "무무커피 동탄호수공원점",
+   "address": "경기 화성시 동탄구 동탄대로8길 60 B3층 B310호",
+   "map_url": "https://map.naver.com/p/entry/place/1932437007",
+   "source_url": "https://m.place.naver.com/place/1932437007/home",
+   "staffed": "무인",
+   "parking": "유료 주차 (최초 30분 무료) · 건물 주차장",
+   "evidence_date": "최근 리뷰 2026-03-29",
+   "on_route": true,
+   "dist_km": 1.4,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "레이크24카페",
+   "address": "경기 화성시 동탄구 동탄장지천2길 2-7 102호",
+   "map_url": "https://map.naver.com/p/entry/place/2007567351",
+   "source_url": "https://m.place.naver.com/place/2007567351/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-09-18",
+   "on_route": true,
+   "dist_km": 1.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "The november 라운지 오산대역점",
+   "address": "경기 오산시 청학로 266-9 1층 102, 103호",
+   "map_url": "https://map.naver.com/p/entry/place/2071371677",
+   "source_url": "https://m.place.naver.com/place/2071371677/home",
+   "staffed": "미확인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-09-24",
+   "on_route": true,
+   "dist_km": 1.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "모롱카페 무인24",
+   "address": "경기 화성시 효행구 효행로291번길 24 110-1",
+   "map_url": "https://map.naver.com/p/entry/place/1961722296",
+   "source_url": "https://m.place.naver.com/place/1961722296/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 상가 주차장 이용 가능합니다. 평일 저녁 6시부터 아침 8시까지, 주말 공휴일 길가주차도 가능합니다😊",
+   "evidence_date": "최근 리뷰 2026-02-23",
+   "on_route": true,
+   "dist_km": 1.7,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "레이크카페",
+   "address": "경기 화성시 동탄구 동탄대로4길 95 3417동 B102호",
+   "map_url": "https://map.naver.com/p/entry/place/1519891270",
+   "source_url": "https://m.place.naver.com/place/1519891270/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 아파트 주차장 이용",
+   "evidence_date": "최근 리뷰 2026-08-03",
+   "on_route": true,
+   "dist_km": 2.0,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "24시무인카페보통리",
+   "address": "경기 화성시 효행구 정남면 세자로 301 24시무인카페보통리",
+   "map_url": "https://map.naver.com/p/entry/place/2013863168",
+   "source_url": "https://m.place.naver.com/place/2013863168/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-01-16",
+   "on_route": true,
+   "dist_km": 2.2,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "버블커피",
+   "address": "경기 화성시 동탄구 노작로 199 1층 101호",
+   "map_url": "https://map.naver.com/p/entry/place/1596081349",
+   "source_url": "https://m.place.naver.com/place/1596081349/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2026-09-23",
+   "on_route": true,
+   "dist_km": 2.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "카페 만월경 동탄한빛길점",
+   "address": "경기 화성시 동탄구 동탄시범한빛길 33",
+   "map_url": "https://map.naver.com/p/entry/place/2067447170",
+   "source_url": "https://m.place.naver.com/place/2067447170/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-04-06",
+   "on_route": false,
+   "dist_km": 2.6,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "24시레드칩",
+   "address": "경기 오산시 죽담로 69 142호",
+   "map_url": "https://map.naver.com/p/entry/place/2020478117",
+   "source_url": "https://m.place.naver.com/place/2020478117/home",
+   "staffed": "무인",
+   "parking": "근방에 세담초등학교 건너편에 공영주차장이 있으나,협소한 관계로 도보나 유료추차장 이용을 권장.",
+   "evidence_date": "최근 리뷰 2026-09-03",
+   "on_route": false,
+   "dist_km": 3.0,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "인사이드커피 수원고색점",
+   "address": "경기 수원시 권선구 오목천로152번길 68 1층 121호",
+   "map_url": "https://map.naver.com/p/entry/place/1293253174",
+   "source_url": "https://m.place.naver.com/place/1293253174/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-04-06",
+   "on_route": false,
+   "dist_km": 3.4,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "카페무인",
+   "address": "경기 화성시 병점구 동탄지성로 409 상가동 1층 102호",
+   "map_url": "https://map.naver.com/p/entry/place/1824406284",
+   "source_url": "https://m.place.naver.com/place/1824406284/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-09-04",
+   "on_route": false,
+   "dist_km": 3.7,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "카페프리헷 동탄신동점 24시 무인카페",
+   "address": "경기 화성시 동탄구 동탄신리천로5길 79 동탄파크릭스 1층 106호",
+   "map_url": "https://map.naver.com/p/entry/place/2053675749",
+   "source_url": "https://m.place.naver.com/place/2053675749/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 아파트 주차장 방문자로 진입 후 오른편 상가 주차장 이용하시면 됩니다 :)",
+   "evidence_date": "최근 리뷰 2026-09-11",
+   "on_route": false,
+   "dist_km": 4.2,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "더리터24 망포점",
+   "address": "경기 수원시 영통구 태장로 33 1층 117호, 118호",
+   "map_url": "https://map.naver.com/p/entry/place/2064368270",
+   "source_url": "https://m.place.naver.com/place/2064368270/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-09-23",
+   "on_route": false,
+   "dist_km": 4.9,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "카페프리헷 신동탄포레자이점 24시 무인카페",
+   "address": "경기 화성시 병점구 영통로60번길 31 아파트상가",
+   "map_url": "https://map.naver.com/p/entry/place/1963545910",
+   "source_url": "https://m.place.naver.com/place/1963545910/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2026-05-11",
+   "on_route": false,
+   "dist_km": 5.3,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "카페프리헷 용인서천마을점 24시 무인카페",
+   "address": "경기 용인시 기흥구 서천로128번길 12 서천마을 휴먼시아 2단지 아파트 상가 106호",
+   "map_url": "https://map.naver.com/p/entry/place/2015243742",
+   "source_url": "https://m.place.naver.com/place/2015243742/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2025-10-02",
+   "on_route": false,
+   "dist_km": 5.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "높음",
+   "note": null
+  },
+  {
+   "name": "데이롱카페 동탄반송타운하우스점",
+   "address": "경기 화성시 동탄구 탄요1길 6-22 1층 103호",
+   "map_url": "https://map.naver.com/p/entry/place/1927153515",
+   "source_url": "https://m.place.naver.com/place/1927153515/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2024-09-01",
+   "on_route": true,
+   "dist_km": 0.6,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "꺼내먹어요 서동탄점",
+   "address": "경기 화성시 동탄구 남여울1길 30-1",
+   "map_url": "https://map.naver.com/p/entry/place/1693578153",
+   "source_url": "https://m.place.naver.com/place/1693578153/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2024-05-12",
+   "on_route": true,
+   "dist_km": 0.8,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "커피에반하다 동탄호수공원점 스마트 무인카페",
+   "address": "경기 화성시 동탄구 동탄대로5길 32 동탄루나갤러리 B 208-1호 지하2",
+   "map_url": "https://map.naver.com/p/entry/place/1688369805",
+   "source_url": "https://m.place.naver.com/place/1688369805/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2022-05-29",
+   "on_route": true,
+   "dist_km": 0.9,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "카페프리헷 동탄반송점 24시 무인카페",
+   "address": "경기 화성시 동탄구 동탄중앙로 97 제다상가동 1층 104호",
+   "map_url": "https://map.naver.com/p/entry/place/1262195052",
+   "source_url": "https://m.place.naver.com/place/1262195052/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2025-08-05",
+   "on_route": true,
+   "dist_km": 1.1,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "일단커피",
+   "address": "경기 화성시 동탄구 동탄순환대로 127-23 1층 105호",
+   "map_url": "https://map.naver.com/p/entry/place/1334684444",
+   "source_url": "https://m.place.naver.com/place/1334684444/home",
+   "staffed": "무인",
+   "parking": "유료 주차 (최초 30분 1,800원)",
+   "evidence_date": "최근 리뷰 2025-02-12",
+   "on_route": true,
+   "dist_km": 1.1,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "모롱카페 무인24 와우리점",
+   "address": "경기 화성시 효행구 봉담읍 와우안길 60 좌측 3호",
+   "map_url": "https://map.naver.com/p/entry/place/1009301290",
+   "source_url": "https://m.place.naver.com/place/1009301290/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기)",
+   "evidence_date": "최근 리뷰 2025-04-26",
+   "on_route": true,
+   "dist_km": 1.3,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "카페프리헷 동탄푸른마을점 24시 무인카페",
+   "address": "경기 화성시 동탄구 동탄공원로 21-42 상가동 B-102호",
+   "map_url": "https://map.naver.com/p/entry/place/2005992425",
+   "source_url": "https://m.place.naver.com/place/2005992425/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 아파트 정문 방문자용 출입구에서 경비실 호출하여 차단기 지난 후, 상가 주차장을 이용하실 수 있어요",
+   "evidence_date": "리뷰 날짜 없음",
+   "on_route": true,
+   "dist_km": 1.3,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "패스트카페 동탄호수공원점",
+   "address": "경기 화성시 동탄구 동탄대로8길 60 리버파크 1동 1층 104호",
+   "map_url": "https://map.naver.com/p/entry/place/1150269392",
+   "source_url": "https://m.place.naver.com/place/1150269392/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2025-08-07",
+   "on_route": true,
+   "dist_km": 1.4,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "데이롱 카페 동탄산척점",
+   "address": "경기 화성시 동탄구 동탄대로10나길 21 유원프라자 1층 108호",
+   "map_url": "https://map.naver.com/p/entry/place/1025814925",
+   "source_url": "https://m.place.naver.com/place/1025814925/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2023-06-30",
+   "on_route": true,
+   "dist_km": 1.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "프리퀀트커피",
+   "address": "경기 화성시 효행구 봉담읍 와우로73번길 15-7 2동1층 106호",
+   "map_url": "https://map.naver.com/p/entry/place/1506580809",
+   "source_url": "https://m.place.naver.com/place/1506580809/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2025-09-11",
+   "on_route": true,
+   "dist_km": 1.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "복돌이네coffee",
+   "address": "경기 화성시 병점구 병점중앙로211번길 3-5 상가 b103호",
+   "map_url": "https://map.naver.com/p/entry/place/1615242212",
+   "source_url": "https://m.place.naver.com/place/1615242212/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2023-04-28",
+   "on_route": true,
+   "dist_km": 2.0,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "카페일분 화성병점점",
+   "address": "경기 화성시 병점구 병점2로 141 6단지 상가동 103호",
+   "map_url": "https://map.naver.com/p/entry/place/1849290636",
+   "source_url": "https://m.place.naver.com/place/1849290636/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2023-04-20",
+   "on_route": true,
+   "dist_km": 2.2,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "커피하우스24",
+   "address": "경기 화성시 동탄구 동탄대로시범길 20 시범한화꿈에그린프레스티지아파트 상가 114호",
+   "map_url": "https://map.naver.com/p/entry/place/1184650704",
+   "source_url": "https://m.place.naver.com/place/1184650704/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2024-02-02",
+   "on_route": false,
+   "dist_km": 2.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "데이롱 카페 동탄기산점",
+   "address": "경기 화성시 병점구 동탄지성로 256 에스케이 뷰파크2차 상가동 1층 107호",
+   "map_url": "https://map.naver.com/p/entry/place/1791874524",
+   "source_url": "https://m.place.naver.com/place/1791874524/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2023-11-07",
+   "on_route": false,
+   "dist_km": 2.8,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "카페무인",
+   "address": "경기 화성시 동탄구 동탄원천로 315-15",
+   "map_url": "https://map.naver.com/p/entry/place/2144878475",
+   "source_url": "https://m.place.naver.com/place/2144878475/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2025-08-25",
+   "on_route": false,
+   "dist_km": 2.8,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "카페인24 동탄역푸르지오점",
+   "address": "경기 화성시 동탄구 동탄순환대로 881-10 상가동 107호",
+   "map_url": "https://map.naver.com/p/entry/place/1229948952",
+   "source_url": "https://m.place.naver.com/place/1229948952/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2024-04-01",
+   "on_route": false,
+   "dist_km": 3.2,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "카페프리헷 동탄청계점 24시 무인카페",
+   "address": "경기 화성시 동탄구 동탄청계로 303-13 상가동 1층 106호",
+   "map_url": "https://map.naver.com/p/entry/place/1783804611",
+   "source_url": "https://m.place.naver.com/place/1783804611/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2025-06-26",
+   "on_route": false,
+   "dist_km": 3.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "디디무인카페 동탄점",
+   "address": "경기 화성시 동탄구 동탄첨단산업1로 27 근린생활시설동 지1층 MB55호( 영천동, 금강펜테리움 IX타워)",
+   "map_url": "https://map.naver.com/p/entry/place/1896032131",
+   "source_url": "https://m.place.naver.com/place/1896032131/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2023-03-02",
+   "on_route": false,
+   "dist_km": 3.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "데이롱 카페 오목천점",
+   "address": "경기 수원시 권선구 오목천로 15 상가동 1층 105호",
+   "map_url": "https://map.naver.com/p/entry/place/1870808923",
+   "source_url": "https://m.place.naver.com/place/1870808923/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2024-08-25",
+   "on_route": false,
+   "dist_km": 3.8,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "더라곰24시 무인카페",
+   "address": "경기 화성시 동탄구 동탄기흥로 614",
+   "map_url": "https://map.naver.com/p/entry/place/1809750654",
+   "source_url": "https://m.place.naver.com/place/1809750654/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "리뷰 날짜 없음",
+   "on_route": false,
+   "dist_km": 4.1,
+   "hours_evidence": "상호에 24시 표기, 네이버 영업시간 정보 없음",
+   "confidence": "낮음",
+   "note": "영업시간 미등록"
+  },
+  {
+   "name": "카페일분 실리콘앨리점",
+   "address": "경기 화성시 동탄구 동탄영천로 150 S01동 149호",
+   "map_url": "https://map.naver.com/p/entry/place/1514958170",
+   "source_url": "https://m.place.naver.com/place/1514958170/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "리뷰 날짜 없음",
+   "on_route": false,
+   "dist_km": 4.5,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "커피에반하다 기흥삼성반도체점 스마트 무인카페",
+   "address": "경기 용인시 기흥구 농서로 236",
+   "map_url": "https://map.naver.com/p/entry/place/1092195103",
+   "source_url": "https://m.place.naver.com/place/1092195103/home",
+   "staffed": "무인",
+   "parking": "미확인",
+   "evidence_date": "최근 리뷰 2024-06-13",
+   "on_route": false,
+   "dist_km": 4.7,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "카페인러쉬 신영통점",
+   "address": "경기 화성시 병점구 영통로27번길 14-17 상가동 1층 103호",
+   "map_url": "https://map.naver.com/p/entry/place/1856190736",
+   "source_url": "https://m.place.naver.com/place/1856190736/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 매장뒤편에 이용가능",
+   "evidence_date": "리뷰 날짜 없음",
+   "on_route": false,
+   "dist_km": 4.9,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  },
+  {
+   "name": "예니커피",
+   "address": "경기 화성시 병점구 영통로50번길 41 1층 106호",
+   "map_url": "https://map.naver.com/p/entry/place/1863731155",
+   "source_url": "https://m.place.naver.com/place/1863731155/home",
+   "staffed": "무인",
+   "parking": "무료 주차 가능(네이버 표기) · 작은 무인카페 입니다 주차장 : 두산위브 상가 뒤에 주차장",
+   "evidence_date": "최근 리뷰 2025-09-16",
+   "on_route": false,
+   "dist_km": 5.1,
+   "hours_evidence": "네이버 플레이스: 24시간 영업, 연중무휴",
+   "confidence": "중간",
+   "note": "최근 1년 내 리뷰 없음"
+  }
+ ],
+ "excluded": [
+  {
+   "name": "카페 만월경 동탄솔빛마을점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "오산드빛",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 21:00에 라스트오더')"
+  },
+  {
+   "name": "마인카페",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 23:00에 영업 종료')"
+  },
+  {
+   "name": "카페아스타나",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 21:30에 라스트오더')"
+  },
+  {
+   "name": "카페 만월경 동탄우남점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "카페올가",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 다음 날 00:30에 라')"
+  },
+  {
+   "name": "샘스무인커피",
+   "reason": "상호에 24시·무인 표기가 있으나 네이버 영업시간은 '' — 근거 상충, 제외"
+  },
+  {
+   "name": "카페 만월경 망포점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "카페 공삼일",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 22:00에 영업 종료')"
+  },
+  {
+   "name": "카페 만월경 동탄반송점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "나우커피 청계점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 24:00에 영업 종료')"
+  },
+  {
+   "name": "카페 만월경 반월점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "카페 만월경 동탄2신도시점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "카페 만월경 동탄청계점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "24시 카페만월경 동탄아르젠점",
+   "reason": "상호에 24시·무인 표기가 있으나 네이버 영업시간은 '영업 중 20:00에 영업 종료' — 근거 상충, 제외"
+  },
+  {
+   "name": "카페 만월경 동탄퍼스트코리아점",
+   "reason": "24시간 아님 (네이버 영업시간 '영업 중 20:00에 영업 종료')"
+  },
+  {
+   "name": "24시 카페 만월경 동탄비전프라자점",
+   "reason": "상호에 24시·무인 표기가 있으나 네이버 영업시간은 '영업 중 20:00에 영업 종료' — 근거 상충, 제외"
+  },
+  {
+   "name": "24시 카페 만월경 동탄호수공원점",
+   "reason": "상호에 24시·무인 표기가 있으나 네이버 영업시간은 '영업 중 20:00에 영업 종료' — 근거 상충, 제외"
+  },
+  {
+   "name": "올림 스터디카페 동탄목동점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "로렐스터디카페 동탄호수점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "TOP스터디카페",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "HY스터디카페 동탄점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "작심스터디카페 더작심 신영통현대점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "토브스터디카페 동탄점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "레드랩스",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "드림스터디카페",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "작심스터디카페 동탄센트럴파크점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "피카 스투디에룸",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "카공족올데이 동탄점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "브레인온스터디카페 병점점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "아이비스터디카페 동탄산척점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "온랩스터디카페 동탄호수점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "카공족 망포역1호점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "디딤스터디카페 워크라운지 화성병점점",
+   "reason": "스터디카페"
+  },
+  {
+   "name": "백점스터디카페 병점역복합타운점",
+   "reason": "스터디카페"
+  }
+ ]
+}
